@@ -45,10 +45,6 @@
     <section class="buttom-verMais">
       <button type="button" name="button">+</button>
     </section>
-
-    <h2> <a name="Quartos disponiveis">Quartos</a> </h2>
-
-
     <!-- ============================ div oculta ====================== -->
 
     <div class="data">
@@ -95,50 +91,6 @@
 
 
     <!-- ==================== fim div oculta ========================== -->
-
-    <section class="card-quarto">
-      <div class="img-card">
-        <img src="img-lugar/quarto.JPG" alt="">
-      </div>
-      <div class="card-info">
-        <h1>Standart Room - Duplo</h1>
-        <span>Apartamento com quarto, banheiro, sala com sofá cama e cozinha americana equipada (fogão, frigobar e microondas). </span>
-        <h4>Disponiveis no quarto:</h4>
-
-        <div class="config-quarto">
-          <div class="wi-fi">
-            <i class="fas fa-wifi"></i>
-          <span>wi-fi</span>
-        </div>
-
-        <div class="wi-fi">
-          <i class="fas fa-user"></i>
-        <span>2 adultos</span>
-        </div>
-
-        <div class="wi-fi">
-          <i class="fas fa-bed"></i>
-        <span>2 camas de solteiro</span>
-        </div>
-
-        <div class="wi-fi">
-          <i class="fas fa-coffee"></i>
-        <span>café da manha</span>
-        </div>
-
-        </div>
-      </div>
-
-      <div class="card-preco">
-        <h4>2 disponiveis</h4>
-        <p>Valor Diaria</p>
-        <h1>245</h1>
-        <p style="color:green;">√ Cancelamento Gratuito</p>
-        <button type="button" name="button">Reservar</button>
-      </div>
-    </section>
-
-
 
     <section class="card-quarto">
       <div class="img-card">

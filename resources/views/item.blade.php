@@ -1,4 +1,3 @@
-@include("includes/functions")
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -6,30 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/resultadoPesquisa.css">
   <script src="https://kit.fontawesome.com/837f81fff7.js" crossorigin="anonymous"></script>
-  <title>Hoteis</title>
+  <title>Item</title>
 </head>
 <body>
   @include("includes/header")
     <main>
-    @php
-    $hotel = call_pdt($_ID);
-    switch ($hotel["tipo"]) {
-      case 1:
-        $servico = "Hospedagem";
-        $info_local = "Informações do hotel:";
-        $horario = true;
-        break;
-      case 2:
-        $servico = "Pousada";
-        $info_local = "Informações da Pousada:";
-        $horario = false;
-        break;
-    }
-    @endphp
       <div class="titulo">
         <div class="box-esq">
-          <h1>{{$hotel["nome"]}}</h1>
-          <span>{{$hotel['endereco']}}</span>
+          <h1>{{$hotel->hotel}}</h1>
+          <span>{{$hotel->endereco}}</span>
           <div class="star-rating">
             <i class="fas fa-star"></i><i class="fas fa-star"></i>
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -38,25 +22,26 @@
 
         <div class="box-dir">
           <span>Diárias a partir de: </span>
-          <h1>R$ {{number_format($hotel['preco'], 2, ',', '.')}}</h1>
-          <button type="button" name="button">Ver quartos</button>
+          <h1>R$ {{number_format($hotel->preco, 2, ',', '.')}}</h1>
+          <a href="#Quartos disponiveis"> <button type="button" name="button">Ver quartos</button></a>
         </div>
       </div>
 
       <section class="img">
         <div class="box-img-esq">
-          <img src="/hoteis/{{$hotel["fotos"][0]}}" alt="">
+          <img src="/hoteis/{{$fotos[0]}}" alt="">
         </div>
         <div class="box-img-dir">
           <div class="img-top">
-            <img src="/hoteis/{{$hotel["fotos"][1]}}" alt="">
+            <img src="/hoteis/{{$fotos[1]}}" alt="">
           </div>
           <div class="img-down">
-            <img src="/hoteis/{{$hotel["fotos"][2]}}" alt="">
+            <img src="/hoteis/{{$fotos[2]}}" alt="">
           </div>
-        <button type="button" class="button-verMais" onclick="abrir()" name="button"> <img src="/hoteis/{{$hotel["fotos"][3]}}" alt=""> <span>Ver mais</span> </button>
+        <button type="button" class="button-verMais" onclick="abrir()" name="button"><span>Mais fotos</span> </button>
         </div>
       </section>
+
 <div class="data">
   <div class="disponibilidade">
     <h1>Disponibilidade</h1>
@@ -109,21 +94,103 @@ function fechar() {
 }
 </script>
 <div id="fundo">
-<h1>{{$hotel["nome"]}}</h1>
+<h1>{{$hotel->hotel}}</h1>
 <div class="banners">
 <button type="button" onclick="fechar()"  class="fechar" name="button"><i class="fa fa-times-circle"></i></button>
 <body>
 
 <div class="slider">
-          @for ($i=0; $i < sizeof($hotel['fotos']); $i++)
-            <img class="slides" src="/hoteis/{{$hotel["fotos"][$i]}}">
+          @for ($i=0; $i < sizeof($fotos); $i++)
+            <img class="slides" src="/hoteis/{{$fotos[$i]}}">
           @endfor
       <button class="slider_esquerda" onclick="plusDivs(-1);plusBG(-1)">&#10094;</button>
       <button class="slider_direita" onclick="plusDivs(1);plusBG(1)">&#10095;</button>
     </div>
   </div>
 </div>
+<main>
+<h2> <a name="Quartos disponiveis">Quartos</a> </h2>
+<section class="card-quarto">
+  <div class="img-card">
+    <img src="/img-lugar/{{$hotel->quartos_foto}}" alt="">
+  </div>
+  <div class="card-info">
+    <h1>Standart Room - Duplo</h1>
+    <span>Apartamento com quarto, banheiro, sala com sofá cama e cozinha americana equipada (fogão, frigobar e microondas). </span>
+    <h4>Disponiveis no quarto:</h4>
 
+    <div class="config-quarto">
+      <div class="wi-fi">
+        <i class="fas fa-user"></i>
+      <span>2 adultos</span>
+      </div>
+
+      <div class="wi-fi">
+        <i class="fas fa-bed"></i>
+      <span>2 camas de solteiro</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-preco">
+    <h4>2 disponiveis</h4>
+    <p>Valor Diaria</p>
+    <h1>245</h1>
+    <p style="color:green;">√ Cancelamento Gratuito</p>
+    <a href="/reservas/1"><button>Reservar</button></a>
+  </div>
+</section>
+
+<section class="card-quarto">
+  <div class="img-card">
+    <img src="/img-lugar/{{$hotel->quartos_foto}}" alt="">
+  </div>
+  <div class="card-info">
+    <h1>Standart Room - Duplo</h1>
+    <span>Apartamento com quarto, banheiro, sala com sofá cama e cozinha americana equipada (fogão, frigobar e microondas). </span>
+    <h4>Disponiveis no quarto:</h4>
+
+    <div class="config-quarto">
+    <div class="wi-fi">
+      <i class="fas fa-user"></i>
+    <span>2 adultos</span>
+    </div>
+
+    <div class="wi-fi">
+      <i class="fas fa-bed"></i>
+    <span>2 camas de solteiro</span>
+    </div>
+    </div>
+  </div>
+
+  <div class="card-preco">
+    <h4>2 disponiveis</h4>
+    <p>Valor Diaria</p>
+    <h1>245</h1>
+    <p style="color:green;">√ Cancelamento Gratuito</p>
+    <a href="/reservas/1"><button>Reservar</button></a>
+  </div>
+</section>
+<div class="card-info-hotel">
+    <h1>Informações do Hotel</h1>
+<div class="card-info">
+    <div class="wi-fi">
+      <i class="fas fa-wifi"></i>
+    <span>wi-fi</span>
+  </div>
+    <div class="wi-fi">
+      <i class="fas fa-coffee"></i>
+    <span>café da manha</span>
+    </div>
+  </div>
+  <hr>
+  <div class="info">
+      <div class="info-esq">
+        <p>{{$hotel->descricao}}</p>
+      </div>
+  </div>
+</div>
+</main>
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
