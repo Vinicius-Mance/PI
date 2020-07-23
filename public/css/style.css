@@ -59,7 +59,7 @@ transition: 0.2s;
   box-shadow: 1px 8px 16px rgba(68,68,68,0.2);
   border: 1px solid #cccccc;
   margin: 20px auto;
-  height: 470px;
+  height: 410px;
 }
 
 .info-bloco {
@@ -109,8 +109,12 @@ transition: 0.2s;
 
 .info-bloco i {
   color: #E16C02;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: normal;
+}
+
+.info-bloco p{
+  height: 60px;
 }
 
 .info-bloco .nome-lugar {
