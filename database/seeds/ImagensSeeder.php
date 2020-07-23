@@ -11,59 +11,84 @@ class ImagensSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=1; $i <= 4; $i++) {
+        for ($i=1; $i <= 10; $i++) {
           DB::table('imagens')->insert([
-              'caminho'=>'algarve flor da rocha hotel'.$i.'.jpg',
+              'caminho'=>'1-Iate_Hotel/'.$i.'.jpg',
               'estabelecimentos_id'=>1
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'banff banff inn'.$i.'.jpg',
+              'caminho'=>'2-Hotel_Porto_Sol/'.$i.'.jpg',
               'estabelecimentos_id'=>2
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'banff Irwins Mountain Inn'.$i.'.jpg',
+              'caminho'=>'3-Club_Med_Hotel/'.$i.'.jpg',
               'estabelecimentos_id'=>3
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'bosnia hotel grad'.$i.'.jpg',
+              'caminho'=>'4-yoo2_rio/'.$i.'.jpg',
               'estabelecimentos_id'=>4
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'bosnia hotel logavina'.$i.'.jpg',
+              'caminho'=>'5-Solar_do_Rosário/'.$i.'.jpg',
               'estabelecimentos_id'=>5
           ]);
 
           DB::table('imagens')->insert([
-              'caminho'=>'bosnia zepter hotel'.$i.'.jpg',
+              'caminho'=>'6-Pousada_Céu_da_Mantiqueira/'.$i.'.jpg',
               'estabelecimentos_id'=>6
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'budapeste fashion street'.$i.'.jpg',
+              'caminho'=>'7-Pantanal_Mato_Grosso_Hotel/'.$i.'.jpg',
               'estabelecimentos_id'=>7
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'budapeste korona panzio'.$i.'.jpg',
+              'caminho'=>'8-Hotel_Mato_Grosso_Águas_Quentes/'.$i.'.jpg',
               'estabelecimentos_id'=>8
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'budapeste nn apartmanette'.$i.'.jpg',
+              'caminho'=>'9-Pousada_Mar_Aberto/'.$i.'.jpg',
               'estabelecimentos_id'=>9
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'castilo casa pepa'.$i.'.jpg',
+              'caminho'=>'10-Pousada_Estrela_do_Mar/'.$i.'.jpg',
               'estabelecimentos_id'=>10
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'castilo hotel monterrey'.$i.'.jpg',
+              'caminho'=>'11-Fasano/'.$i.'.jpg',
               'estabelecimentos_id'=>11
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'castilo the way hotel '.$i.'.jpg',
+              'caminho'=>'12-Sheraton/'.$i.'.jpg',
               'estabelecimentos_id'=>12
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'islandia bb hotel'.$i.'.jpg',
+              'caminho'=>'13-Novotel/'.$i.'.jpg',
               'estabelecimentos_id'=>13
+          ]);
+
+          DB::table('imagens')->insert([
+              'caminho'=>'14-Pousada_Recanto_da_Coruja/'.$i.'.jpg',
+              'estabelecimentos_id'=>14
+          ]);
+
+          DB::table('imagens')->insert([
+              'caminho'=>'15-Blue Tree Towers'.$i.'.jpg',
+              'estabelecimentos_id'=>15
+          ]);
+
+          DB::table('imagens')->insert([
+              'caminho'=>'16-Casa_Mar/'.$i.'.jpg',
+              'estabelecimentos_id'=>16
+          ]);
+
+          DB::table('imagens')->insert([
+              'caminho'=>'17-Pousada_Estrela_Alpina/'.$i.'.jpg',
+              'estabelecimentos_id'=>17
+          ]);
+
+          DB::table('imagens')->insert([
+              'caminho'=>'18-Four_Points/'.$i.'.jpg',
+              'estabelecimentos_id'=>18
           ]);
         }
     }
