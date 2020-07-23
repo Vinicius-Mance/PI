@@ -16,7 +16,7 @@
       <section class="grid-main">
 {{-- {{dd($informacoes)}} --}}
       @foreach ($informacoes as $card)
-      <div class="div"> <img src="hoteis/{{$card->imagem}}" alt="">
+      <div class="div"> <img src="Imgens PI Hoteis/{{$card->imagem}}" alt="">
         <div class="info-bloco">
             <p class="nome-produto">{{$card->nome}}</p>
           <div class="rating-and-stars">
