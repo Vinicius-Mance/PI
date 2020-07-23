@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Quarto;
 use App\Estabelecimento;
-use Illuminate\Http\Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Storage;
 class QuartosController extends Controller
 {
 

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/footer.css">
 <footer>
-  <div class="footer_info">
+  {{-- <div class="footer_info">
     <h3>conheça</h3>
   <a href="/Rpesq">Quem somos</a>
   <a href="/Rpesq">Trabalhe conosco</a>
@@ -26,5 +26,6 @@
     <a href="/Rpesq"><img src="/icon-img/instagram_logo.png" alt=""> </a>
     <a href="/Rpesq"><img src="/icon-img/linkedin_logo.png" alt=""> </a>
     <a href="/Rpesq"><img src="/icon-img/youtube_logo.png" alt=""> </a>
-  </div>
+  </div> --}}
+  <h3>Estavago</h3>
 </footer>
