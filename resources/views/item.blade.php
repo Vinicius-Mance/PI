@@ -188,6 +188,20 @@ function fechar() {
       <div class="info-esq">
         <p>{{$hotel->descricao}}</p>
       </div>
+
+      <div class="info-dir">
+        <h2>Taxas e impostos</h2>
+        <p>Valores referentes a impostos e taxas administrativas já estão incluídos no momento da finalização da compra, no site do ESTA VAGO (não sendo necessário, após a finalização da compra, o pagamento de nenhum tipo de taxa).</p>
+        <h2>Politicas de cancelamento</h2>
+        <p>Viajante, aqui o cancelamento é GRATUITO!*
+            Isso mesmo: se acontecer algum imprevisto, você tem a facilidade de cancelar até duas semanas após a sua compra, sem qualquer multa ou cobrança extra.
+
+            *O cancelamento grátis é válido até 14 dias após a compra (com exceção do dia do check-in ou check-in em semanas de feriados). Após este prazo, será aplicada uma multa de 20%.
+
+            *Para semanas de feriados será cobrada multa de 50%.
+            *No dia do check-in ou posterior ao mesmo será cobrada multa de 100%.
+            *Se você optar pelos créditos para utilizar em futuras viagens, poderá efetuar o cancelamento gratuito (com exceção do dia do check-in e semanas de feriados) até a véspera do check-in - sem qualquer cobrança de multa.</p>
+      </div>
   </div>
 </div>
 </main>
