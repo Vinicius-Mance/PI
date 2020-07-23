@@ -29,14 +29,14 @@
 
       <section class="img">
         <div class="box-img-esq">
-          <img src="/hoteis/{{$fotos[0]}}" alt="">
+          <img src="/Imgens PI Hoteis/{{$fotos[0]}}" alt="">
         </div>
         <div class="box-img-dir">
           <div class="img-top">
-            <img src="/hoteis/{{$fotos[1]}}" alt="">
+            <img src="/Imgens PI Hoteis/{{$fotos[1]}}" alt="">
           </div>
           <div class="img-down">
-            <img src="/hoteis/{{$fotos[2]}}" alt="">
+            <img src="/Imgens PI Hoteis/{{$fotos[2]}}" alt="">
           </div>
         <button type="button" class="button-verMais" onclick="abrir()" name="button"><span>Mais fotos</span> </button>
         </div>
@@ -101,7 +101,7 @@ function fechar() {
 
 <div class="slider">
           @for ($i=0; $i < sizeof($fotos); $i++)
-            <img class="slides" src="/hoteis/{{$fotos[$i]}}">
+            <img class="slides" src="/Imgens PI Hoteis/{{$fotos[$i]}}">
           @endfor
       <button class="slider_esquerda" onclick="plusDivs(-1);plusBG(-1)">&#10094;</button>
       <button class="slider_direita" onclick="plusDivs(1);plusBG(1)">&#10095;</button>
