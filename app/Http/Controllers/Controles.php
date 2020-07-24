@@ -29,10 +29,10 @@ namespace App\Http\Controllers;
       {
         $info = DB::select("
           select e.nome as hotel,e.endereco,e.numEstrelas as estrelas,
-          q.fotos as quartos_foto ,valorDiaria as preco, e.descricao
-          		from estabelecimentos e
-          		inner join quartos q on e.id = q.id
-              where e.id = $id;
+            q.fotos as quartos_foto, e.descricao,q.nome as quarto
+            		from estabelecimentos e
+            		inner join quartos q on e.id = q.id
+          where e.id = $id;
         ");
         foreach ($info as $hotel){}
         $imagem = DB::select("
@@ -40,9 +40,15 @@ namespace App\Http\Controllers;
             from imagens
             where estabelecimentos_id = $id;
         ");
-        foreach($imagem as $foto){
-                $fotos[] = $foto->caminho;}
-        return view('item',["_ID"=>$id], compact('hotel','fotos'));
+
+        $reservas = DB::table('quartos')
+          ->select(DB::raw('count(nome) as quantidade'),'nome','valorDiaria as preco','fotos')
+          ->where('estabelecimentos_id','=',$id)
+          ->groupBy('nome','valorDiaria','fotos')
+          ->get();
+
+        foreach($imagem as $foto){$fotos[] = $foto->caminho;}
+        return view('item',["_ID"=>$id], compact('hotel','fotos','reservas'));
       }
 
       function pesquisa()

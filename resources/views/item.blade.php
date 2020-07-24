@@ -22,7 +22,7 @@
 
         <div class="box-dir">
           <span>Diárias a partir de: </span>
-          <h1>R$ {{number_format($hotel->preco, 2, ',', '.')}}</h1>
+          {{-- <h1>R$ {{number_format($hotel->preco, 2, ',', '.')}}</h1> --}}
           <a href="#Quartos disponiveis"> <button type="button" name="button">Ver quartos</button></a>
         </div>
       </div>
@@ -110,67 +110,38 @@ function fechar() {
 </div>
 <main>
 <h2> <a name="Quartos disponiveis">Quartos</a> </h2>
+{{-- {{dd($reservas)}} --}}
+@foreach ($reservas as $reserva)
 <section class="card-quarto">
   <div class="img-card">
-    <img src="/img-lugar/{{$hotel->quartos_foto}}" alt="">
+    <img src="/img-lugar/{{$reserva->fotos}}" alt="">
   </div>
   <div class="card-info">
-    <h1>Standart Room - Duplo</h1>
-    <span>Apartamento com quarto, banheiro, sala com sofá cama e cozinha americana equipada (fogão, frigobar e microondas). </span>
+    <h1>{{$reserva->nome}}</h1>
+    <span></span>
     <h4>Disponiveis no quarto:</h4>
 
     <div class="config-quarto">
       <div class="wi-fi">
-        <i class="fas fa-user"></i>
-      <span>2 adultos</span>
+        <i class="fas fa-user"></i><span>2 adultos</span>
       </div>
 
       <div class="wi-fi">
-        <i class="fas fa-bed"></i>
-      <span>2 camas de solteiro</span>
+        <i class="fas fa-bed"></i><span>2 camas de solteiro</span>
       </div>
     </div>
   </div>
 
   <div class="card-preco">
-    <h4>2 disponiveis</h4>
+    <h4>{{$reserva->quantidade}} disponiveis</h4>
     <p>Valor Diaria</p>
-    <h1>245</h1>
+    <h1>R$ {{number_format($reserva->preco, 2, ',', '.')}}</h1>
     <p style="color:green;">√ Cancelamento Gratuito</p>
     <a href="/reservas/1"><button>Reservar</button></a>
   </div>
 </section>
+@endforeach
 
-<section class="card-quarto">
-  <div class="img-card">
-    <img src="/img-lugar/{{$hotel->quartos_foto}}" alt="">
-  </div>
-  <div class="card-info">
-    <h1>Standart Room - Duplo</h1>
-    <span>Apartamento com quarto, banheiro, sala com sofá cama e cozinha americana equipada (fogão, frigobar e microondas). </span>
-    <h4>Disponiveis no quarto:</h4>
-
-    <div class="config-quarto">
-    <div class="wi-fi">
-      <i class="fas fa-user"></i>
-    <span>2 adultos</span>
-    </div>
-
-    <div class="wi-fi">
-      <i class="fas fa-bed"></i>
-    <span>2 camas de solteiro</span>
-    </div>
-    </div>
-  </div>
-
-  <div class="card-preco">
-    <h4>2 disponiveis</h4>
-    <p>Valor Diaria</p>
-    <h1>245</h1>
-    <p style="color:green;">√ Cancelamento Gratuito</p>
-    <a href="/reservas/1"><button>Reservar</button></a>
-  </div>
-</section>
 <div class="card-info-hotel">
     <h1>Informações do Hotel</h1>
 <div class="card-info">
