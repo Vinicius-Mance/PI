@@ -13,7 +13,7 @@
             </div>
           @endauth
           @guest
-            <a href="/login" class="dropbtn">Entrar</a>
+            <a href="/login" class="dropbtn"><i class="fa fa-sign-in-alt" style="font-size:17px; width:20px;"></i>Entrar</a>
           @endguest
         </div>
       </div>
@@ -47,7 +47,7 @@
           {{-- <div class="input3">
             <label>Quartos</label>
             <div class="box-select">
-              <div class="custom-select" style="width:calc(100% - 10px);height: 70px;">
+              <div class="custom-select" style="width:calc(100% - 10px);height: 60px;">
                   <select>
                     @for ($i=0; $i <= 9; $i++)
                       <option value="{{$i}}">{{$i}}</option>

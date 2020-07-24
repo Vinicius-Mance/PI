@@ -323,7 +323,7 @@ class QuartosSeeder extends Seeder
 
 
         DB::table('quartos')->insert([
-        'nome'=>'Standart Famly',
+        'nome'=>'Standart Family',
         'numCamasSolteiro' => 1,
         'numCamasCasal' => 1,
         'valorDiaria' => '345.00',
@@ -332,7 +332,7 @@ class QuartosSeeder extends Seeder
         'estabelecimentos_id' => 10]);
 
         DB::table('quartos')->insert([
-        'nome'=>'Standart Famly',
+        'nome'=>'Standart Family',
         'numCamasSolteiro' => 1,
         'numCamasCasal' => 1,
         'valorDiaria' => '345.00',
@@ -341,7 +341,7 @@ class QuartosSeeder extends Seeder
         'estabelecimentos_id' => 10]);
 
         DB::table('quartos')->insert([
-        'nome'=>'Standart Famly',
+        'nome'=>'Standart Family',
         'numCamasSolteiro' => 1,
         'numCamasCasal' => 1,
         'valorDiaria' => '385.00',
