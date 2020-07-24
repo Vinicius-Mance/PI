@@ -9,6 +9,7 @@
 </head>
 <body>
   @include("includes/header")
+  {{-- {{dd($reservas)}} --}}
     <main>
       <div class="titulo">
         <div class="box-esq">
@@ -22,7 +23,7 @@
 
         <div class="box-dir">
           <span>Diárias a partir de: </span>
-          {{-- <h1>R$ {{number_format($hotel->preco, 2, ',', '.')}}</h1> --}}
+          <h1>R$ {{number_format($maisBarata, 2, ',', '.')}}</h1>
           <a href="#Quartos disponiveis"> <button type="button" name="button">Ver quartos</button></a>
         </div>
       </div>
@@ -114,11 +115,11 @@ function fechar() {
 @foreach ($reservas as $reserva)
 <section class="card-quarto">
   <div class="img-card">
-    <img src="/img-lugar/{{$reserva->fotos}}" alt="">
+    <img src="{{$reserva->fotos}}" alt="">
   </div>
   <div class="card-info">
     <h1>{{$reserva->nome}}</h1>
-    <span></span>
+    <span>{{$reserva->descricao}}</span>
     <h4>Disponiveis no quarto:</h4>
 
     <div class="config-quarto">
@@ -133,8 +134,7 @@ function fechar() {
   </div>
 
   <div class="card-preco">
-    <h4>{{$reserva->quantidade}} disponiveis</h4>
-    <p>Valor Diaria</p>
+    <h4>Valor Diaria</h4>
     <h1>R$ {{number_format($reserva->preco, 2, ',', '.')}}</h1>
     <p style="color:green;">√ Cancelamento Gratuito</p>
     <a href="/reservas/1"><button>Reservar</button></a>

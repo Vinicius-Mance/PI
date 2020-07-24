@@ -49,7 +49,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '235.00',
         'descricao' => 'Quarto duplo com frigobar e banheiro privativo',
-        'fotos'=>'quarto.JPG',
+        'fotos'=>'/Imgens PI Hoteis/1-Iate_Hotel/8.jpg',
         'estabelecimentos_id' => 1 ]);
 
         DB::table('quartos')->insert([
@@ -58,7 +58,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '235.00',
         'descricao' => 'Quarto duplo com frigobar e banheiro privativo',
-        'fotos'=>'quarto.JPG',
+        'fotos'=>'/Imgens PI Hoteis/1-Iate_Hotel/8.jpg',
         'estabelecimentos_id' => 1 ]);
 
 

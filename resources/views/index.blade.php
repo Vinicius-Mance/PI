@@ -15,9 +15,16 @@
     <h2 class="titulo-promocao">As melhores promoções para você</h2>
       <section class="grid-main">
 {{-- {{dd($informacoes)}} --}}
+      {{-- @php
+      echo "<pre>";
+    print_r($informacoes);
+    echo "</pre>";
+
+      @endphp --}}
       @foreach ($informacoes as $card)
       <div class="div"> <img src="Imgens PI Hoteis/{{$card->imagem}}" alt="">
         <div class="info-bloco">
+            {{$card->hotelId}}
             <p class="nome-produto">{{$card->nome}}</p>
           <div class="rating-and-stars">
               <span class="number-rating">{{$star = 4}}.0</span>

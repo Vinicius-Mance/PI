@@ -16,39 +16,40 @@ namespace App\Http\Controllers;
           }
         }
         $informacoes = DB::select(
-          "select e.nome,caminho as imagem,valorDiaria as preco,e.id as hotelId
+            "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId
           		from estabelecimentos e
             		inner join quartos q on e.id = q.id
             		inner join imagens i on e.id = i.id
-                    order by e.id limit 8;
-        ");
+					order by preco
+          asc limit 8
+          ");
         return view('index', compact('informacoes'));
       }
 
       function item($id)
       {
         $info = DB::select("
-          select e.nome as hotel,e.endereco,e.numEstrelas as estrelas,
-            q.fotos as quartos_foto, e.descricao,q.nome as quarto
-            		from estabelecimentos e
-            		inner join quartos q on e.id = q.id
-          where e.id = $id;
-        ");
+            select e.nome as hotel,e.endereco,e.numEstrelas as estrelas,
+              e.descricao
+                from estabelecimentos e
+            where e.id = $id;
+          ");
         foreach ($info as $hotel){}
         $imagem = DB::select("
         select caminho
             from imagens
             where estabelecimentos_id = $id;
         ");
-
-        $reservas = DB::table('quartos')
-          ->select(DB::raw('count(nome) as quantidade'),'nome','valorDiaria as preco','fotos')
-          ->where('estabelecimentos_id','=',$id)
-          ->groupBy('nome','valorDiaria','fotos')
-          ->get();
-
         foreach($imagem as $foto){$fotos[] = $foto->caminho;}
-        return view('item',["_ID"=>$id], compact('hotel','fotos','reservas'));
+
+        $maisBarata = Quarto::all()->where('estabelecimentos_id','=', $id)->min('valorDiaria');
+
+        $reservas = DB::select("select nome,valorDiaria as preco,fotos,descricao
+                  from quartos
+                  where estabelecimentos_id = $id
+                  group by nome,preco,fotos,descricao
+        ");
+        return view('item',["_ID"=>$id], compact('hotel','fotos','reservas','maisBarata'));
       }
 
       function pesquisa()
