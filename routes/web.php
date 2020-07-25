@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Controles@home');
 
-Route::get('/pesquisa', 'Controles@pesquisa');
+Route::get('/pesquisa', 'EstabelecimentosController@listaHoteis');
 
 Route::get('/reserva', 'Controles@reserva');
 
@@ -31,6 +31,8 @@ Route::get('/user', 'Controles@user');
 Route::get('/perfil/{id}','Controles@perfil');
 
 Route::post('/cadastro', 'UsuariosController@cadastro');
+
+Route::get('/pesquisa', 'EstabelecimentosController@buscarHoteis');
 
 Route::post('/login', 'UsuariosController@login');
 

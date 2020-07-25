@@ -8,6 +8,8 @@ namespace App\Http\Controllers;
   use Illuminate\Support\Facades\DB;
 
     class Controles extends Controller{
+
+
       function home()
       {
         if (Auth::check()) {
@@ -15,6 +17,7 @@ namespace App\Http\Controllers;
             return redirect('/homeAdmin');
           }
         }
+        
         $informacoes = DB::select(
           "select e.nome,caminho as imagem,valorDiaria as preco,e.id as hotelId
           		from estabelecimentos e

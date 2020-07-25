@@ -18,4 +18,8 @@ class Estabelecimento extends Model
   public function quarto(){
     return $this->hasMany('App\Quarto');
   }
+
+  public function imagem(){
+    return $this->hasMany("App\Imagem");
+  }
 }

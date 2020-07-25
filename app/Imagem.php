@@ -9,6 +9,6 @@ class Imagem extends Model
   protected $table = "imagens";
 
   public function estabelecimento(){
-    return $this->belongsTo('App\Estabelecimento');
+    return $this->belongsTo("App\Estabelecimento");
   }
 }

@@ -19,7 +19,8 @@
       </div>
 
       <div class="header-B">
-        <form action="/busca" method="get">
+        <form action="/pesquisa" method="get">
+          @csrf
           <div class="input1">
             <label for="local">Local</label>
             <input type="text" name="local" value="{{old('local')}}">
