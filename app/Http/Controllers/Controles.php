@@ -8,6 +8,8 @@ namespace App\Http\Controllers;
   use Illuminate\Support\Facades\DB;
 
     class Controles extends Controller{
+
+
       function home()
       {
         if (Auth::check()) {
@@ -19,7 +21,8 @@ namespace App\Http\Controllers;
           $maisBarata[] = Quarto::all()->where('estabelecimentos_id','=', $i)->min('valorDiaria');
         }
         $informacoes = DB::select(
-            "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId
+            "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId,
+            e.numEstrelas as numEstrelas
           		from estabelecimentos e
             		inner join quartos q on e.id = q.id
             		inner join imagens i on e.id = i.id

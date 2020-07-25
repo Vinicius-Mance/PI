@@ -130,11 +130,14 @@ main section{
 }
 
 .info h2{
-  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #696762;
 }
 
 .info h4{
-  margin: 0px;
+  margin-top: 0px;
+  Color: #696762;
+  font-family:serif;
 }
 
 
@@ -171,11 +174,14 @@ main section{
   align-items: center;
   color: #54a9ab;
   margin-top: 25px;
-  font-size: 14px;
+  font-size: 13px;
+  flex-wrap: wrap;
+
 }
 
 .wi-fi{
-  margin-right: 25px;
+  margin-right: 20px;
+  margin-bottom: 5px;
   font-family:serif;
 }
 
@@ -198,6 +204,8 @@ main section{
   padding: 0px;
   height: 60%;
   margin-top: 130px;
+  margin-left: auto;
+  margin-right: 30px;
 
 }
 
@@ -214,9 +222,10 @@ main section{
 
   color: orange;
   font-size: 35px;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 0px;
+  text-align: center;
 
 }
 

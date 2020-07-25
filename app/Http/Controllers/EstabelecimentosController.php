@@ -123,7 +123,54 @@ class EstabelecimentosController extends Controller
         	)
         );
     ");
+
     return view('pesquisa', compact('teste'));
+    }
+
+    public function listaHoteis(){
+      //$local = $request->local;
+
+      $hoteis = DB::select(
+        "select e.nome,caminho as imagem,valorDiaria as preco,e.id as hotelId, e.cidade as cidade,
+        e.estado as estado, e.numEstrelas as numEstrelas, e.wifi as wifi, e.piscina as piscina,
+        e.sauna as sauna, e.cafeDaManha as cafeDaManha, e.cancelamentoGratuito as cancelamentoGratuito
+            from estabelecimentos e
+              inner join quartos q on e.id = q.id
+              inner join imagens i on e.id = i.id
+                  order by e.id limit 16;
+      ");
+      return view('pesquisa',["hoteis"=>$hoteis] );
+
+
+      // if($local == ""){
+      //   return view('index');
+      // }
+      // $hoteis = Estabelecimento::where('nome', 'LIKE','%'.$local.'%')->get();
+      // return view('pesquisa',["hoteis"=>$hoteis] );
+    }
+
+    public function buscarHoteis(Request $request){
+      $local = $request->local;
+
+      if($local == ""){
+        return view('index',);
+      }
+      // $hoteis = Estabelecimento::where('nome', 'LIKE','%'.$local.'%')->get();
+      // return view('pesquisa',["hoteis"=>$hoteis] );
+
+
+      $hoteis = DB::select(
+        "select e.nome,caminho as imagem,valorDiaria as preco,e.id as hotelId, e.cidade as cidade,
+        e.estado as estado, e.numEstrelas as numEstrelas, e.wifi as wifi, e.piscina as piscina,
+        e.sauna as sauna, e.cafeDaManha as cafeDaManha, e.cancelamentoGratuito as cancelamentoGratuito
+            from estabelecimentos e
+              inner join quartos q on e.id = q.id
+              inner join imagens i on e.id = i.id
+                  where cidade LIKE '%$local%';
+      ");
+      return view('pesquisa',["hoteis"=>$hoteis] );
+
+
     }
 
 }
