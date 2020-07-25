@@ -29,12 +29,12 @@ class ImagensSeeder extends Seeder
               'estabelecimentos_id'=>4
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'5-Solar_do_Rosário/'.$i.'.jpg',
+              'caminho'=>'5-Solar_do_Rosario/'.$i.'.jpg',
               'estabelecimentos_id'=>5
           ]);
 
           DB::table('imagens')->insert([
-              'caminho'=>'6-Pousada_Céu_da_Mantiqueira/'.$i.'.jpg',
+              'caminho'=>'6-Pousada_Ceu_da_Mantiqueira/'.$i.'.jpg',
               'estabelecimentos_id'=>6
           ]);
           DB::table('imagens')->insert([
@@ -42,7 +42,7 @@ class ImagensSeeder extends Seeder
               'estabelecimentos_id'=>7
           ]);
           DB::table('imagens')->insert([
-              'caminho'=>'8-Hotel_Mato_Grosso_Águas_Quentes/'.$i.'.jpg',
+              'caminho'=>'8-Hotel_Mato_Grosso_Aguas_Quentes/'.$i.'.jpg',
               'estabelecimentos_id'=>8
           ]);
           DB::table('imagens')->insert([
@@ -72,7 +72,7 @@ class ImagensSeeder extends Seeder
           ]);
 
           DB::table('imagens')->insert([
-              'caminho'=>'15-Blue Tree Towers'.$i.'.jpg',
+              'caminho'=>'15-Blue Tree Towers/'.$i.'.jpg',
               'estabelecimentos_id'=>15
           ]);
 
