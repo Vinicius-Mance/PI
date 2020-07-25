@@ -12,7 +12,7 @@ Route::get('/Rpesq', 'Controles@Rpesq');
 
 Route::get('/item/{id}', 'Controles@item');
 
-Route::get('/reservas/{id}', 'Controles@reservas');
+Route::get('/reservas/{id}/{quartos}', 'Controles@reservas');
 
 Route::get('/logout', 'UsuariosController@logout');
 

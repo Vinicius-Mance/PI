@@ -124,35 +124,35 @@
 
               <div class="wifi">
 
-                @if($hotel->wifi == 1)
+                @if($hotel->wifi)
                 <div class="wi-fi">
                   <i class="fas fa-wifi"></i>
                 <span>wi-fi</span>
               </div>
               @endif
 
-              @if($hotel->piscina == 1)
+              @if($hotel->piscina)
               <div class="wi-fi">
                 <i class="fas fa-water"></i>
               <span>Piscina</span>
             </div>
               @endif
 
-              @if($hotel->piscina == 1)
+              @if($hotel->sauna)
               <div class="wi-fi">
                 <i class="fas fa-hot-tub"></i>
               <span>Sauna</span>
             </div>
               @endif
 
-              @if($hotel->piscina == 1)
+              @if($hotel->cafe)
               <div class="wi-fi">
                 <i class="fas fa-coffee"></i>
               <span>Café da Manha</span>
             </div>
               @endif
 
-              @if($hotel->piscina == 1)
+              @if($hotel->pets)
               <div class="wi-fi">
                 <i class="fas fa-cat"></i>
               <span>Permite pets</span>
@@ -161,12 +161,12 @@
 
               </div>
 
+                @if($hotel->cancelar)
               <div class="cancel2">
-                @if($hotel->cancelamentoGratuito == 1)
                 <i class="fas fa-check-circle"></i>
               <span>Cancelamento Gratis</span>
-              @endif
             </div>
+              @endif
 
 
             <div class="localizacao">
@@ -184,7 +184,7 @@
 
               <div class="preco2">
                 <p>R${{number_format($hotel->preco, 2, ',', '.')}}</p>
-                <button type="button" name="button">Reservar</button>
+                <a href="/item/{{$hotel->hotelId}}"><button type="button" name="button">Reservar</button></a>
               </div>
 
             </div>

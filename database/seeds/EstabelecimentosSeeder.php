@@ -112,8 +112,8 @@ class EstabelecimentosSeeder extends Seeder
         'cafeDaManha'=>'1',
         'piscina'=>'1',
         'sauna'=>'1',
-        'permitePets'=>'0',
-        'cancelamentoGratuito'=>'0',
+        'permitePets'=>null,
+        'cancelamentoGratuito'=>null,
         'numEstrelas'=>'3',
       ]);
       DB::table('estabelecimentos')->insert([
@@ -132,8 +132,8 @@ class EstabelecimentosSeeder extends Seeder
         'cafeDaManha'=>'1',
         'piscina'=>'1',
         'sauna'=>'1',
-        'permitePets'=>'0',
-        'cancelamentoGratuito'=>'0',
+        'permitePets'=>null,
+        'cancelamentoGratuito'=>null,
         'numEstrelas'=>'3',
       ]);
 
@@ -154,7 +154,7 @@ class EstabelecimentosSeeder extends Seeder
           'piscina'=>'1',
           'sauna'=>'1',
           'permitePets'=>'1',
-          'cancelamentoGratuito'=>'0',
+          'cancelamentoGratuito'=>null,
           'numEstrelas'=>'3',
       ]);
       DB::table('estabelecimentos')->insert([
@@ -174,7 +174,7 @@ class EstabelecimentosSeeder extends Seeder
           'piscina'=>'1',
           'sauna'=>'1',
           'permitePets'=>'1',
-          'cancelamentoGratuito'=>'0',
+          'cancelamentoGratuito'=>null,
           'numEstrelas'=>'3',
       ]);
       DB::table('estabelecimentos')->insert([
@@ -193,8 +193,8 @@ class EstabelecimentosSeeder extends Seeder
           'cafeDaManha'=>'1',
           'piscina'=>'1',
           'sauna'=>'1',
-          'permitePets'=>'0',
-          'cancelamentoGratuito'=>'0',
+          'permitePets'=>null,
+          'cancelamentoGratuito'=>null,
           'numEstrelas'=>'4',
       ]);
             DB::table('estabelecimentos')->insert([
@@ -213,8 +213,8 @@ class EstabelecimentosSeeder extends Seeder
               'cafeDaManha'=>'1',
               'piscina'=>'1',
               'sauna'=>'1',
-              'permitePets'=>'0',
-              'cancelamentoGratuito'=>'0',
+              'permitePets'=>null,
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'4',
                   ]);
 
@@ -235,7 +235,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'5',
             ]);
 
@@ -260,7 +260,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'4',
             ]);
 
@@ -302,7 +302,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'3',
             ]);
 
@@ -323,7 +323,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'4',
             ]);
 
@@ -344,7 +344,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'4',
             ]);
 
@@ -365,7 +365,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'3',
             ]);
 
@@ -386,7 +386,7 @@ class EstabelecimentosSeeder extends Seeder
               'piscina'=>'1',
               'sauna'=>'1',
               'permitePets'=>'1',
-              'cancelamentoGratuito'=>'0',
+              'cancelamentoGratuito'=>null,
               'numEstrelas'=>'5',
             ]);
     }

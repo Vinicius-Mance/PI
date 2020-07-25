@@ -36,7 +36,7 @@ namespace App\Http\Controllers;
       {
         $info = DB::select("
             select e.nome as hotel,e.endereco,e.numEstrelas as estrelas,
-              e.descricao
+            e.id as hotelId,e.descricao
                 from estabelecimentos e
             where e.id = $id;
           ");
@@ -50,10 +50,10 @@ namespace App\Http\Controllers;
 
         $maisBarata = Quarto::all()->where('estabelecimentos_id','=', $id)->min('valorDiaria');
 
-        $reservas = DB::select("select nome,valorDiaria as preco,fotos,descricao
+        $reservas = DB::select("select nome,valorDiaria as preco,fotos,descricao,id
                   from quartos
                   where estabelecimentos_id = $id
-                  group by nome,preco,fotos,descricao
+                  group by nome,preco,fotos,descricao,id
         ");
         return view('item',["_ID"=>$id], compact('hotel','fotos','reservas','maisBarata'));
       }
@@ -73,9 +73,15 @@ namespace App\Http\Controllers;
         return view('reserva');
       }
 
-      function reservas($id)
+      function reservas($id,$quarto)
       {
-        if (Auth::check()) { return view('reservas',["_ID"=>$id]); }
+        $info = DB::select("select nome,valorDiaria as preco,fotos,descricao,id
+                  from quartos
+                  where estabelecimentos_id = $id and id = $quarto
+                  group by nome,preco,fotos,descricao,id
+        ");
+        foreach ($info as $reserva) {}
+        if (Auth::check()) { return view('reservas',compact('reserva'),["_ID"=>$id],['quarto'=>$quarto]); }
         else { return redirect('/login');}
       }
 

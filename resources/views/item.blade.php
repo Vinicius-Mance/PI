@@ -9,7 +9,6 @@
 </head>
 <body>
   @include("includes/header")
-  {{-- {{dd($reservas)}} --}}
     <main>
       <div class="titulo">
         <div class="box-esq">
@@ -43,7 +42,7 @@
         </div>
       </section>
 
-<div class="data">
+{{-- <div class="data">
   <div class="disponibilidade">
     <h1>Disponibilidade</h1>
     <p>Selecione da data da sua viagem</p>
@@ -83,7 +82,7 @@
     <button type="button" name="button">Consultar</button>
   </form>
   </div>
-</div>
+</div> --}}
     </main>
 {{-- banner rotativo --}}
 <script>
@@ -111,7 +110,6 @@ function fechar() {
 </div>
 <main>
 <h2> <a name="Quartos disponiveis">Quartos</a> </h2>
-{{-- {{dd($reservas)}} --}}
 @foreach ($reservas as $reserva)
 <section class="card-quarto">
   <div class="img-card">
@@ -136,8 +134,8 @@ function fechar() {
   <div class="card-preco">
     <h4>Valor Diaria</h4>
     <h1>R$ {{number_format($reserva->preco, 2, ',', '.')}}</h1>
-    <p style="color:green;">√ Cancelamento Gratuito</p>
-    <a href="/reservas/1"><button>Reservar</button></a>
+    {{-- <p style="color:green;">√ Cancelamento Gratuito</p> --}}
+    <a href="/reservas/{{$hotel->hotelId}}/{{$reserva->id}}"><button>Reservar</button></a>
   </div>
 </section>
 @endforeach

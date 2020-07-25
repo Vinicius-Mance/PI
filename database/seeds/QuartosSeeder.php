@@ -40,7 +40,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '335.00',
         'descricao' => 'Quarto com uma cama de Casal, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/1-Iate_Hotel/10.jpg',
+        'fotos'=>'/Imgens PI Hoteis/1-Iate_Hotel/10.jpg',
         'estabelecimentos_id' => 1 ]);
 
         DB::table('quartos')->insert([
@@ -68,7 +68,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '335.00',
         'descricao' => 'Quarto com uma cama de Casal, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/2-Hotel_Porto_Sol/8.jpg',
+        'fotos'=>'/Imgens PI Hoteis/2-Hotel_Porto_Sol/8.jpg',
         'estabelecimentos_id' => 2 ]);
 
         DB::table('quartos')->insert([
@@ -77,7 +77,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '315.00',
         'descricao' => 'Quarto duplo com frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/2-Hotel_Porto_Sol/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/2-Hotel_Porto_Sol/5.jpg',
         'estabelecimentos_id' => 2 ]);
 
         DB::table('quartos')->insert([
@@ -86,7 +86,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '315.00',
         'descricao' => 'Quarto duplo com frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/2-Hotel_Porto_Sol/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/2-Hotel_Porto_Sol/5.jpg',
         'estabelecimentos_id' => 2 ]);
 
 
@@ -96,7 +96,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '535.00',
         'descricao' => 'Quarto com uma cama de Casal, frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
+        'fotos'=>'/Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
         'estabelecimentos_id' => 3 ]);
 
         DB::table('quartos')->insert([
@@ -105,7 +105,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '535.00',
         'descricao' => 'Quarto com uma cama de Casal, frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
+        'fotos'=>'/Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
         'estabelecimentos_id' => 3 ]);
 
         DB::table('quartos')->insert([
@@ -114,7 +114,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '535.00',
         'descricao' => 'Quarto com uma cama de Casal, frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
+        'fotos'=>'/Imgens PI Hoteis/3-Club_Med_Hotel/2.jpg',
         'estabelecimentos_id' => 3 ]);
 
         DB::table('quartos')->insert([
@@ -123,7 +123,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 2,
         'valorDiaria' => '815.00',
         'descricao' => 'Quarto duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/3-Club_Med_Hotel/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/3-Club_Med_Hotel/4.jpg',
         'estabelecimentos_id' => 3 ]);
 
         DB::table('quartos')->insert([
@@ -132,7 +132,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '915.00',
         'descricao' => 'Quarto duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/3-Club_Med_Hotel/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/3-Club_Med_Hotel/6.jpg',
         'estabelecimentos_id' => 3 ]);
 
 
@@ -146,7 +146,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '625.00',
         'descricao' => 'Quarto duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/4-yoo2_rio/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/4-yoo2_rio/3.jpg',
         'estabelecimentos_id' => 4 ]);
 
         DB::table('quartos')->insert([
@@ -155,7 +155,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '625.00',
         'descricao' => 'Quarto duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/4-yoo2_rio/9.jpg',
+        'fotos'=>'/Imgens PI Hoteis/4-yoo2_rio/9.jpg',
         'estabelecimentos_id' => 4 ]);
 
         DB::table('quartos')->insert([
@@ -164,7 +164,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '485.00',
         'descricao' => 'Quarto Single com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/4-yoo2_rio/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/4-yoo2_rio/7.jpg',
         'estabelecimentos_id' => 4 ]);
 
 
@@ -177,7 +177,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '465.00',
         'descricao' => 'Quarto Duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/5-Solar_do_Rosário/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/5-Solar_do_Rosário/7.jpg',
         'estabelecimentos_id' => 5]);
 
 
@@ -187,7 +187,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '315.00',
         'descricao' => 'Quarto Duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/5-Solar_do_Rosário/8.jpg',
+        'fotos'=>'/Imgens PI Hoteis/5-Solar_do_Rosário/8.jpg',
         'estabelecimentos_id' => 5]);
 
         DB::table('quartos')->insert([
@@ -196,7 +196,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '465.00',
         'descricao' => 'Quarto Duplo com frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/5-Solar_do_Rosário/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/5-Solar_do_Rosário/7.jpg',
         'estabelecimentos_id' => 5]);
 
 
@@ -208,7 +208,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '515.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
         'estabelecimentos_id' => 6]);
 
         DB::table('quartos')->insert([
@@ -217,7 +217,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '515.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
         'estabelecimentos_id' => 6]);
 
         DB::table('quartos')->insert([
@@ -226,7 +226,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '515.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/6-Pousada_Céu_da_Mantiqueira/5.jpg',
         'estabelecimentos_id' => 6]);
 
 
@@ -238,7 +238,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '465.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/3.jpg',
         'estabelecimentos_id' => 7]);
 
         DB::table('quartos')->insert([
@@ -247,7 +247,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '465.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/9.jpg',
+        'fotos'=>'/Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/9.jpg',
         'estabelecimentos_id' => 7]);
 
 
@@ -257,7 +257,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '305.00',
         'descricao' => 'Quarto com duas camas de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/7-Pantanal_Mato_Grosso_Hotel/4.jpg',
         'estabelecimentos_id' => 7]);
 
 
@@ -268,7 +268,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '465.00',
         'descricao' => 'Quarto com cama de casal e duas camas de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/3.jpg',
         'estabelecimentos_id' => 8]);
 
 
@@ -278,7 +278,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '405.00',
         'descricao' => 'Quarto com cama de casal e uma cama de solteiro alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/7.jpg',
         'estabelecimentos_id' => 8]);
 
         DB::table('quartos')->insert([
@@ -287,7 +287,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '345.00',
         'descricao' => 'Quarto com cama de casal alem de frigobar, TV e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/8-Hotel_Mato_Grosso_Águas_Quentes/4.jpg',
         'estabelecimentos_id' => 8]);
 
 
@@ -298,7 +298,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '645.00',
         'descricao' => 'Quarto com cama de casal, frigobar',
-        'fotos'=>'Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
         'estabelecimentos_id' => 9]);
 
         DB::table('quartos')->insert([
@@ -307,7 +307,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '645.00',
         'descricao' => 'Quarto com cama de casal, frigobar',
-        'fotos'=>'Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
         'estabelecimentos_id' => 9]);
 
         DB::table('quartos')->insert([
@@ -316,7 +316,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '645.00',
         'descricao' => 'Quarto com cama de casal, frigobar',
-        'fotos'=>'Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/9-Pousada_Mar_Aberto/6.jpg',
         'estabelecimentos_id' => 9]);
 
 
@@ -328,7 +328,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '345.00',
         'descricao' => 'Quarto com cama de casal, cama de solteiro, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/3.jpg',
         'estabelecimentos_id' => 10]);
 
         DB::table('quartos')->insert([
@@ -337,7 +337,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '345.00',
         'descricao' => 'Quarto com cama de casal, cama de solteiro, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/3.jpg',
         'estabelecimentos_id' => 10]);
 
         DB::table('quartos')->insert([
@@ -346,7 +346,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '385.00',
         'descricao' => 'Quarto com cama de casal, cama de solteiro, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/8.jpg',
+        'fotos'=>'/Imgens PI Hoteis/10-Pousada_Estrela_do_Mar/8.jpg',
         'estabelecimentos_id' => 10]);
 
 
@@ -357,7 +357,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '1385.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/11-Fasano/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/11-Fasano/7.jpg',
         'estabelecimentos_id' => 11]);
 
         DB::table('quartos')->insert([
@@ -366,7 +366,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '1385.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/11-Fasano/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/11-Fasano/7.jpg',
         'estabelecimentos_id' => 11]);
 
 
@@ -376,7 +376,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '985.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/11-Fasano/9.jpg',
+        'fotos'=>'/Imgens PI Hoteis/11-Fasano/9.jpg',
         'estabelecimentos_id' => 11]);
 
         DB::table('quartos')->insert([
@@ -385,7 +385,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '985.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/11-Fasano/9.jpg',
+        'fotos'=>'/Imgens PI Hoteis/11-Fasano/9.jpg',
         'estabelecimentos_id' => 11]);
 
 
@@ -397,7 +397,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '485.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/12-Sheraton/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/12-Sheraton/6.jpg',
         'estabelecimentos_id' => 12]);
 
         DB::table('quartos')->insert([
@@ -406,7 +406,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '485.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/12-Sheraton/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/12-Sheraton/6.jpg',
         'estabelecimentos_id' => 12]);
 
         DB::table('quartos')->insert([
@@ -415,7 +415,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 2,
         'valorDiaria' => '595.00',
         'descricao' => 'Quarto com 2 camas de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/12-Sheraton/8.jpg',
+        'fotos'=>'/Imgens PI Hoteis/12-Sheraton/8.jpg',
         'estabelecimentos_id' => 12]);
 
 
@@ -426,7 +426,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '595.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/13-Novotel/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/13-Novotel/4.jpg',
         'estabelecimentos_id' => 13]);
 
         DB::table('quartos')->insert([
@@ -435,7 +435,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '595.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/13-Novotel/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/13-Novotel/4.jpg',
         'estabelecimentos_id' => 13]);
 
         DB::table('quartos')->insert([
@@ -444,7 +444,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '395.00',
         'descricao' => 'Quarto com cama de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/13-Novotel/10.jpg',
+        'fotos'=>'/Imgens PI Hoteis/13-Novotel/10.jpg',
         'estabelecimentos_id' => 13]);
 
         DB::table('quartos')->insert([
@@ -453,7 +453,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '395.00',
         'descricao' => 'Quarto com cama de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/13-Novotel/10.jpg',
+        'fotos'=>'/Imgens PI Hoteis/13-Novotel/10.jpg',
         'estabelecimentos_id' => 13]);
 
 
@@ -465,7 +465,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '695.00',
         'descricao' => 'Quarto com cama de casal e 2 camas de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/3.jpg',
         'estabelecimentos_id' => 14]);
 
         DB::table('quartos')->insert([
@@ -474,7 +474,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '695.00',
         'descricao' => 'Quarto com cama de casal e 2 camas de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/3.jpg',
         'estabelecimentos_id' => 14]);
 
 
@@ -484,7 +484,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '495.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/8.jpg',
+        'fotos'=>'/Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/8.jpg',
         'estabelecimentos_id' => 14]);
 
         DB::table('quartos')->insert([
@@ -493,7 +493,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '505.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/9.jpg',
+        'fotos'=>'/Imgens PI Hoteis/14-Pousada_Recanto_da_Coruja/9.jpg',
         'estabelecimentos_id' => 14]);
 
 
@@ -503,7 +503,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '305.00',
         'descricao' => 'Quarto com 2 camas de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/15-Blue Tree Towers/2.jpg',
+        'fotos'=>'/Imgens PI Hoteis/15-Blue Tree Towers/2.jpg',
         'estabelecimentos_id' => 15]);
 
         DB::table('quartos')->insert([
@@ -512,7 +512,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '305.00',
         'descricao' => 'Quarto com 2 camas de solteiro, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/15-Blue Tree Towers/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/15-Blue Tree Towers/3.jpg',
         'estabelecimentos_id' => 15]);
 
         DB::table('quartos')->insert([
@@ -521,7 +521,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '405.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/15-Blue Tree Towers/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/15-Blue Tree Towers/4.jpg',
         'estabelecimentos_id' => 15]);
 
         DB::table('quartos')->insert([
@@ -530,7 +530,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 0,
         'valorDiaria' => '405.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/15-Blue Tree Towers/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/15-Blue Tree Towers/4.jpg',
         'estabelecimentos_id' => 15]);
 
 
@@ -541,7 +541,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '435.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/16-Casa_Mar/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/16-Casa_Mar/3.jpg',
         'estabelecimentos_id' => 16]);
 
         DB::table('quartos')->insert([
@@ -550,7 +550,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '435.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/16-Casa_Mar/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/16-Casa_Mar/5.jpg',
         'estabelecimentos_id' => 16]);
 
         DB::table('quartos')->insert([
@@ -559,7 +559,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '435.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/16-Casa_Mar/7.jpg',
+        'fotos'=>'/Imgens PI Hoteis/16-Casa_Mar/7.jpg',
         'estabelecimentos_id' => 16]);
 
 
@@ -571,7 +571,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '365.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/17-Pousada_Estrela_Alpina/4.jpg',
+        'fotos'=>'/Imgens PI Hoteis/17-Pousada_Estrela_Alpina/4.jpg',
         'estabelecimentos_id' => 17]);
 
         DB::table('quartos')->insert([
@@ -580,7 +580,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '485.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/17-Pousada_Estrela_Alpina/5.jpg',
+        'fotos'=>'/Imgens PI Hoteis/17-Pousada_Estrela_Alpina/5.jpg',
         'estabelecimentos_id' => 17]);
 
         DB::table('quartos')->insert([
@@ -589,7 +589,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '535.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/17-Pousada_Estrela_Alpina/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/17-Pousada_Estrela_Alpina/6.jpg',
         'estabelecimentos_id' => 17]);
 
 
@@ -599,7 +599,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '635.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/18-Four_Points/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/18-Four_Points/3.jpg',
         'estabelecimentos_id' => 18]);
 
         DB::table('quartos')->insert([
@@ -608,7 +608,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 1,
         'valorDiaria' => '635.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/18-Four_Points/3.jpg',
+        'fotos'=>'/Imgens PI Hoteis/18-Four_Points/3.jpg',
         'estabelecimentos_id' => 18]);
 
         DB::table('quartos')->insert([
@@ -617,7 +617,7 @@ class QuartosSeeder extends Seeder
         'numCamasCasal' => 2,
         'valorDiaria' => '735.00',
         'descricao' => 'Quarto com cama de casal, TV, frigobar e banheiro privativo',
-        'fotos'=>'Imgens PI Hoteis/18-Four_Points/6.jpg',
+        'fotos'=>'/Imgens PI Hoteis/18-Four_Points/6.jpg',
         'estabelecimentos_id' => 18]);
 
     }
