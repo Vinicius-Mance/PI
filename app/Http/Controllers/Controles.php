@@ -17,9 +17,10 @@ namespace App\Http\Controllers;
             return redirect('/homeAdmin');
           }
         }
-        
+
         $informacoes = DB::select(
-            "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId
+            "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId,
+            e.numEstrelas as numEstrelas
           		from estabelecimentos e
             		inner join quartos q on e.id = q.id
             		inner join imagens i on e.id = i.id

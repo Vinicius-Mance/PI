@@ -24,18 +24,18 @@
       @foreach ($informacoes as $card)
       <div class="div"> <img src="Imgens PI Hoteis/{{$card->imagem}}" alt="">
         <div class="info-bloco">
-            {{$card->hotelId}}
+            <!-- {{$card->hotelId}} -->
             <p class="nome-produto">{{$card->nome}}</p>
           <div class="rating-and-stars">
-              <span class="number-rating">{{$star = 4}}.0</span>
+              <span class="number-rating">{{$card->numEstrelas}}.0</span>
             <div class="star-rating">
-              @for ($i=0; $i < 5; $i++)
-                @if ($i < $star)
-                  <i class="fa fa-star"></i>
-                @else
+              @for ($i=0; $i < $card->numEstrelas; $i++)
+                <i class="fa fa-star"></i>
+              @endfor
+              @for ($i=0; $i < (5 - $card->numEstrelas); $i++)
                   <i class="fa fa-star-o"></i>
-                @endif
-                @endfor
+              @endfor
+
             </div>
           </div>
         </div>
