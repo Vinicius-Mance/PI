@@ -15,15 +15,18 @@ namespace App\Http\Controllers;
             return redirect('/homeAdmin');
           }
         }
+        for ($i=1; $i <= 8; $i++) {
+          $maisBarata[] = Quarto::all()->where('estabelecimentos_id','=', $i)->min('valorDiaria');
+        }
         $informacoes = DB::select(
             "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId
           		from estabelecimentos e
             		inner join quartos q on e.id = q.id
             		inner join imagens i on e.id = i.id
-					order by preco
-          asc limit 8
+					order by e.id,preco
+          asc limit 8;
           ");
-        return view('index', compact('informacoes'));
+        return view('index', compact('informacoes','maisBarata'));
       }
 
       function item($id)
