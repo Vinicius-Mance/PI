@@ -74,15 +74,15 @@ namespace App\Http\Controllers;
         return view('reserva');
       }
 
-      function reservas($id,$quarto)
+      function reservas($id,$quartos)
       {
         $info = DB::select("select nome,valorDiaria as preco,fotos,descricao,id
                   from quartos
-                  where estabelecimentos_id = $id and id = $quarto
+                  where estabelecimentos_id = $id and id = $quartos
                   group by nome,preco,fotos,descricao,id
         ");
         foreach ($info as $reserva) {}
-        if (Auth::check()) { return view('reservas',compact('reserva'),["_ID"=>$id],['quarto'=>$quarto]); }
+        if (Auth::check()) { return view('reservas',compact('reserva'),["_ID"=>$id,'_QUARTO'=>$quartos]); }
         else { return redirect('/login');}
       }
 
