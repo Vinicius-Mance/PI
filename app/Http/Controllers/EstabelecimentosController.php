@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Estabelecimento;
 use App\Imagem;
+use App\Quartos;
 use Illuminate\Support\Facades\DB;
 
 class EstabelecimentosController extends Controller
@@ -186,7 +187,7 @@ class EstabelecimentosController extends Controller
     $local = $request->local;
     $entrada = $request->entrada;
     $saida = $request->saida;
-    $teste = DB::select("select distinct e.*
+    $pesquisa = DB::select("select distinct e.*
       from
       	estabelecimentos e
           inner join quartos q on e.id = q.estabelecimentos_id
@@ -201,7 +202,7 @@ class EstabelecimentosController extends Controller
         );
     ");
 
-    return view('pesquisa', compact('teste'));
+    return view('pesquisa', compact('pesquisa'));
     }
 
     public function listaHoteis(){
@@ -214,9 +215,9 @@ class EstabelecimentosController extends Controller
             from estabelecimentos e
               inner join quartos q on e.id = q.id
               inner join imagens i on e.id = i.id
-                  order by e.id limit 16;
+                  order by e.id;
       ");
-      return view('pesquisa',["hoteis"=>$hoteis] );
+      return view('pesquisa',compact('hoteis') );
 
 
       // if($local == ""){
@@ -229,23 +230,23 @@ class EstabelecimentosController extends Controller
     public function buscarHoteis(Request $request){
       $local = $request->local;
 
-      if($local == ""){
-        return view('index',);
-      }
+      // if($local == ""){
+      //   return redirect('/',);
+      // }
       // $hoteis = Estabelecimento::where('nome', 'LIKE','%'.$local.'%')->get();
       // return view('pesquisa',["hoteis"=>$hoteis] );
 
 
       $hoteis = DB::select(
-        "select e.nome,caminho as imagem,valorDiaria as preco,e.id as hotelId, e.cidade as cidade,
-        e.estado as estado, e.numEstrelas as numEstrelas, e.wifi as wifi, e.piscina as piscina,
-        e.sauna as sauna, e.cafeDaManha as cafeDaManha, e.cancelamentoGratuito as cancelamentoGratuito
+        "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId, e.cidade,
+        e.estado, e.numEstrelas as numEstrelas, e.wifi as wifi, e.piscina ,
+        e.sauna, e.cafeDaManha as cafe, e.cancelamentoGratuito as cancelar,e.permitePets as pets
             from estabelecimentos e
               inner join quartos q on e.id = q.id
               inner join imagens i on e.id = i.id
                   where cidade LIKE '%$local%';
       ");
-      return view('pesquisa',["hoteis"=>$hoteis] );
+      return view('pesquisa',compact('hoteis'));
 
 
     }

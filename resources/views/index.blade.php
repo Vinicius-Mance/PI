@@ -14,13 +14,6 @@
   </video>
     <h2 class="titulo-promocao">As melhores promoções para você</h2>
       <section class="grid-main">
-{{-- {{dd($informacoes)}} --}}
-      {{-- @php
-      echo "<pre>";
-    print_r($informacoes);
-    echo "</pre>";
-
-      @endphp --}}
       @foreach ($informacoes as $card)
       <div class="div"> <img src="Imgens PI Hoteis/{{$card->imagem}}" alt="">
         <div class="info-bloco">
@@ -43,7 +36,7 @@
         <div class="bloco-de-preco">
           <p class="descricao-preco">Diárias a partir de:</p>
           <div class="preco-g">
-          <p class="preco">R${{number_format($card->preco, 2, ',', '.')}}</p>
+          <p class="preco">R${{number_format($maisBarata[$card->hotelId -1], 2, ',', '.')}}</p>
           </div>
         </div>
         <a href="/item/{{$card->hotelId}}" class="ver_mais">Ver mais</a>

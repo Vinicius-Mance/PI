@@ -1,4 +1,3 @@
-@include("includes/functions")
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,49 +11,33 @@
       <img src="/img/logo.png" alt="">
       <h1>Esta Vago</h1>
     </header>
-
+{{-- {{dd($reserva)}} --}}
     <main>
       <section class="card-reserva">
 
         <div class="titulo">
-          @php
-            $quarto = call_pdt($_ID);
-            extract($quarto["horario"]);
-            extract($quarto["comodidades"]);
-          @endphp
-          <h1>{{$quarto["nome"]}}</h1>
-          <p>{{$quarto["endereco"]}}</p>
+          <h1>{{$reserva->nome}}</h1>
+          <p>{{$reserva->descricao}}</p>
         </div>
 
         <div class="card-info">
 
           <div class="img">
-            <img src="/hoteis/{{$quarto["fotos"][0]}}" alt="">
+            <img src="{{$reserva->fotos}}" alt="">
           </div>
 
           <div class="info">
-            <h1>Standart Room</h1>
+            {{-- <h1>Standart Room</h1>
             <p><span>Entrada:</span> <span> {{strftime('%A, %d de %B as %H:%Mh', strtotime($entrada))}}</span></p>
-            <p><span>Saida:</span> <span> {{strftime('%A, %d de %B as %H:%Mh', strtotime($saida))}}</span></p>
-            <p><span>Hospedes:</span> Max <span> 2 pessoas</span></p>
-            @if ($cafe)<p><span>Alimentação:</span> Café da manha</p>@endif
-            <p><span>{{$quarto['noites']}} Noites x R$ {{number_format($quarto['preco'], 2,',', '.')}} :</span> R$ {{number_format($quarto['preco'] *2, 2,',', '.')}}</p>
-              @if (!$cancelar)
-                <p><h4>Cancelamento Gratuito</h4></p>
-              @else
-                <p><span>Taxa de cancelamento: R$ {{number_format($cancelar, 2,',', '.')}} </span></p> @endif
-            @if (!$taxa_reg)
-            <p><h4>Sem taxa de registro</h4></p>
-            @else
-              <p><span>Taxa de registro: R$ {{number_format($taxa_reg, 2,',', '.')}}</span></p>
-            @endif
+            <p><span>Saida:</span> <span> {{strftime('%A, %d de %B as %H:%Mh', strtotime($saida))}}</span></p> --}}
+            <p><span> Diária R$ :</span> R$ {{number_format($reserva->preco *2, 2,',', '.')}}</p>
           </div>
         </div>
         @php
-        $total = $taxa_reg + ($quarto['preco'] * $quarto['hospedes']);
+        // $total = $quarto['preco'] * $quarto['hospedes'];
         @endphp
         <div class="total">
-          <h1>Total: R$ {{number_format($total, 2,',', '.')}}</h1>
+          {{-- <h1>Total: R$ {{number_format($total, 2,',', '.')}}</h1> --}}
         </div>
         <hr>
         <h1>DADOS DA RESERVA</h1>

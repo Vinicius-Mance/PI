@@ -37,10 +37,7 @@
 
     </header>
     <main>
-      <!-- <video width="101%" height="100%" autoplay loop>
-        <source src="img/estaVago.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video> -->
+
     </main>
 
 
