@@ -51,5 +51,7 @@ Route::get('/quartosAdmin/{id}','QuartosController@quartosAdmin');
 Route::get('/busca', 'EstabelecimentosController@busca');
 
 Route::get('/dadosQuartosAdmin/{id}', 'QuartosController@dadosQuartosAdmin');
+
+Route::post('/reservarQuarto', 'ReservasController@reservarQuarto');
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});
