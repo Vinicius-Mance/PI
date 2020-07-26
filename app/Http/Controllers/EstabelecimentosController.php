@@ -244,7 +244,7 @@ class EstabelecimentosController extends Controller
             from estabelecimentos e
               inner join quartos q on e.id = q.id
               inner join imagens i on e.id = i.id
-                  where cidade LIKE '%$local%';
+                  where (e.cidade LIKE '%$local%' or e.nome LIKE '%$local%' or e.estado LIKE '%$local%');
       ");
       return view('pesquisa',compact('hoteis'));
 

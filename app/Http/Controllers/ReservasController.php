@@ -37,6 +37,7 @@ class ReservasController extends Controller
 
       $to = \Carbon\Carbon::createFromFormat('Y-m-d', $request->saida);
       $from = \Carbon\Carbon::createFromFormat('Y-m-d', $request->entrada);
+
       $diff_in_days = $to->diffInDays($from);
       $reserva->valor = $diff_in_days * $request->valor;
       dd($request->all(),$reserva);
