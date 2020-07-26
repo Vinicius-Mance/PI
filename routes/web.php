@@ -69,7 +69,7 @@ Route::post('/editarDadosHotel/{id}', 'EstabelecimentosController@salvaDadosHote
 Route::get('/editarDadosQuarto/{id}', 'QuartosController@editarDadosQuarto');
 Route::post('/editarDadosQuarto/{id}', 'QuartosController@salvaDadosQuarto');
 
-Route::post('/reservarQuarto/{id}/{quartos}', 'ReservasController@reservarQuarto');
+Route::post('/reservarQuarto', 'ReservasController@reservarQuarto');
 
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});
