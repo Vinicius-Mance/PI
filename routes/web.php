@@ -12,7 +12,7 @@ Route::get('/Rpesq', 'Controles@Rpesq');
 
 Route::get('/item/{id}', 'Controles@item');
 
-Route::get('/reservas/{id}', 'Controles@reservas');
+Route::get('/reservas/{id}/{quartos}', 'Controles@reservas');
 
 Route::get('/logout', 'UsuariosController@logout');
 
@@ -69,7 +69,7 @@ Route::post('/editarDadosHotel/{id}', 'EstabelecimentosController@salvaDadosHote
 Route::get('/editarDadosQuarto/{id}', 'QuartosController@editarDadosQuarto');
 Route::post('/editarDadosQuarto/{id}', 'QuartosController@salvaDadosQuarto');
 
-Route::post('/reservarQuarto', 'ReservasController@reservarQuarto');
+Route::post('/reservarQuarto/{id}/{quartos}', 'ReservasController@reservarQuarto');
 
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});

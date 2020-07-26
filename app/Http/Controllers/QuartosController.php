@@ -74,10 +74,6 @@ class QuartosController extends Controller
     return view('editarDadosQuarto',["_ID"=>$id], compact('quarto'));
   }
 
-
-
-
-
   function salvaDadosQuarto(Request $request, $id){
 
 
