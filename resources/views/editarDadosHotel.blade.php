@@ -16,6 +16,10 @@
         <h2>Atualizar informações</h2>
       </div>
 
+      <!-- <div class="btn-cad-quarto">
+        <a href="/cadastroQuartos/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-plus"></i></button> Cadastrar Quarto</a>
+      </div> -->
+
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
 
@@ -169,7 +173,7 @@
             <hr>
 
             <div class="exibir-fotos">
-                 <h2>Imagens</h2>
+                 <h2>Adicionar Novas Imagens</h2>
 
                  <div class="box-fotos">
 

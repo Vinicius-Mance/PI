@@ -39,11 +39,11 @@ class EstabelecimentosController extends Controller
 
       "estado" => "required",
 
-      "tel1" => "required|between:12,14",
+      "tel1" => "required|between:10,14",
 
-      "tel2"=>"required|between:12,14",
+      "tel2"=>"required|between:10,14",
 
-      "celular"=>"required|between:13,15",
+      "celular"=>"required|between:11,15",
 
       "descricao"=>"required",
 
@@ -87,7 +87,7 @@ class EstabelecimentosController extends Controller
 
     $hotel->cancelamentoGratuito = $request->cancelamentoGratuito;
 
-    $hotel->fotos = $request->fotos;
+    //$hotel->fotos = $request->fotos;
 
     $hotel->numEstrelas = $request->numEstrelas;
 
@@ -99,11 +99,17 @@ class EstabelecimentosController extends Controller
           $imagem = new imagem();
 
           $imagem->estabelecimentos_id = $hotel->id;
-          $imagem->caminho = $file->store('/imagensHotel');
+          $imagem->caminho = $file->store('imagensHotel');
           $imagem->save();
           unset($imagem);
         }
-    return redirect('/cadastroQuartos/'.$id);
+    return redirect('/editarDadosHotel/'.$id);
+  }
+
+  public function cadastroHotelView(){
+
+
+    return view('/cadastroHotel');
   }
 
 

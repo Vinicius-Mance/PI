@@ -22,7 +22,7 @@ main{
   margin: auto;
   background-color: white;
   padding: 50px;
-  margin-top: 50px;
+  margin-top: 10px;
   border-radius: 20px;
   box-shadow: 1px 8px 16px rgba(68,68,68,0.6);
   margin-bottom: 50px;
@@ -36,7 +36,7 @@ main{
   margin: auto;
   border-radius: 20px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 13px;
 }
 
@@ -45,6 +45,57 @@ main{
   text-align: center;
   font-family: sans-serif;
   font-size: 19px;
+}
+
+.menu-btn{
+  width: 300px;
+  height: 70px;
+  display: flex;
+
+  margin-left: 15%;
+
+
+}
+
+.btn-menu{
+  width: 100%;
+
+}
+
+.btn-menu-1{
+  width: 50%;
+  height: 70px;
+  margin-left: 10px;
+
+}
+
+#b001{
+  padding-right: 25px;
+}
+
+.btn-cad-quarto{
+  width: 100%;
+  height: 60px;
+}
+
+.btn-cad-quarto button{
+  width: 40px;
+  height: 40px;
+  background-color: #0085a8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+.btn-cad-quarto a{
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+  border: 1px solid #0085a8;
+  padding: 20px 10px 20px 5px;
+  margin-right: 0px;
 }
 
 .card-info{

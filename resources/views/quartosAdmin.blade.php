@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/headerAdmin.css">
     <link rel="stylesheet" href="/css/hotelAdmin.css">
+    <script src="https://kit.fontawesome.com/837f81fff7.js" crossorigin="anonymous"></script>
     <title></title>
   </head>
   <body>
@@ -11,19 +12,23 @@
     <main>
 
       <div class="title">
-        <h2>Hoteis</h2>
+        <h2>Quartos</h2>
       </div>
 
-      <section class="box-pesquisa-user">
+      <!-- <section class="box-pesquisa-user">
         <p>Pesquisar Hotel</p>
-
         <div class="pesquisa-user">
           <form class="" action="index.html" method="post">
             <input type="text" name="" value="" placeholder="nome do hotel">
             <button type="button" name="button">Pesquisar</button>
           </form>
         </div>
-      </section>
+      </section> -->
+
+
+      <div class="btn-cad-quarto">
+        <a href="/cadastroQuartos/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-plus"></i></button> Cadastrar Quarto</a>
+      </div>
 
       <section class="box-return-users">
 

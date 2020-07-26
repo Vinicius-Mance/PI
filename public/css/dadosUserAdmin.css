@@ -104,3 +104,20 @@ main{
   width: 40px;
 
 }
+
+.btns-dQuartos{
+  width: 300px;
+  height: 50px;
+
+  margin-top: 20px;
+  display: flex;
+}
+
+.btn-voltar button{
+  width: 100px;
+  height: 40px;
+  background-color: #0085a8;
+  border: none;
+  margin-right: 15px;
+  color: white;
+}

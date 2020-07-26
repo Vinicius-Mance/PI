@@ -11,6 +11,7 @@
 
     <main>
 
+
       <div class="title">
         <h2>Cadastrar Quartos</h2>
       </div>
@@ -18,17 +19,17 @@
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
 
-          <form class="" action="/cadastrarQuartos/{id}" method="post" enctype="multipart/form-data">
+        <form class="" action="/editarDadosQuarto/{{$quarto->id}}" method="post" enctype="multipart/form-data">
             @csrf
             <p>Nome quarto</p>
-            <input type="text" name="nome" placeholder="room name">
+            <input type="text" name="nome" placeholder="room name" value="{{$quarto->nome}}">
               @error('nome')
                 <span class="erro">Nome muito curto (mínimo de 10 caracteres)</span>
               @enderror
             <div class="box-cep">
               <div class="cep">
                 <p>Numero de Camas de Solteiro</p>
-                <select name="numCamasSolteiro">
+                <select id="cam2" name="numCamasSolteiro">
                       <option selected disabled>Solteiro</option>
                 @for ($i=0; $i < 10; $i++)
                     <option value="{{$i}}">{{$i}}</option>
@@ -41,7 +42,7 @@
 
               <div class="cep">
                 <p>Numero de Camas de Casal</p>
-                <select name="numCamasCasal">
+                <select id="cam1" name="numCamasCasal">
                     <option selected disabled>Casal</option>
                 @for ($i=0; $i <= 10; $i++)
                     <option value="{{$i}}">{{$i}}</option>
@@ -52,9 +53,14 @@
                 @enderror
               </div>
 
+              <script>
+              document.getElementById('cam1').value = '{{$quarto->numCamasCasal}}';
+              document.getElementById('cam2').value = '{{$quarto->numCamasSolteiro}}';
+              </script>
+
               <div class="cep2">
                 <p>Valor Diaria</p>
-                <input type="number" name="valorDiaria" placeholder="Value">
+                <input type="number" name="valorDiaria" placeholder="Value" value="{{$quarto->valorDiaria}}">
                 @error ('valorDiaria')
                   <span class="erro">Coloque um valor para a diária</span>
                 @enderror
@@ -65,7 +71,7 @@
 
 
             <p>Descrição</p>
-            <textarea name="descricao" rows="8" cols="80" placeholder="description"></textarea>
+            <textarea name="descricao" rows="8" cols="80" placeholder="description">{{$quarto->descricao}}</textarea>
             @error ('descricao')
               <span class="erro">Dê uma descrição aos quartos</span>
             @enderror
@@ -77,13 +83,9 @@
               @error ('fotos')
                 <span class="erro">Selecione uma foto para os quartos</span>
               @enderror
-            <p>Número de quartos a serem cadastrados</p>
-            <input type="number" name="quantidade">
-            @error ('quantidade')
-                <span class="erro">Coloque a quantidade de quartos a serem cadastrados</span>
-            @enderror
-            <input type="hidden" name="estabelecimentos_id" value="{{$_ID}}">
-            <button type="submit" name="upload">Cadastrar</button>
+
+            <input type="hidden" name="estabelecimentos_id" value="{{$quarto->estabelecimentos_id}}">
+            <button type="submit" name="upload">ATUALIZAR</button>
         @php
 
         @endphp

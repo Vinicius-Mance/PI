@@ -74,10 +74,11 @@
               <div class="cep">
                 <p>Telefone 1</p>
                 <input  type="text" name="tel1" placeholder="phone number 1">
+                @error ('tel1')
+                  <span class="erro">forneça um telefone válido</span>
+                @enderror
               </div>
-              @error ('tel1')
-                <span class="erro">forneça um telefone válido</span>
-              @enderror
+
               <div class="cep">
                 <p>Telefone 2</p>
                 <input  type="text" name="tel2" placeholder="phone number 2">
@@ -89,10 +90,11 @@
               <div class="cep2">
                 <p>Celular</p>
                 <input  type="text" name="celular" placeholder="cellphone">
+                @error ('celular')
+                  <span class="erro">forneça um celular válido</span>
+                @enderror
               </div>
-              @error ('celular')
-                <span class="erro">forneça um celular válido</span>
-              @enderror
+
             </div>
 
             <p>Descrição</p>
@@ -134,12 +136,12 @@
 
               <div class="check-box">
                 <select name="numEstrelas">
-                  <option selected disabled>Estrelas</option>
+                  <option selected disabled>0</option>
                 @for ($i=1; $i <= 5; $i++)
                   <option value="{{$i}}">{{$i}}</option>
                 @endfor
                 </select>
-                <p>Classificação em Estrelas<i class="fas fa-star"></i></p>
+                <p>Classificação em Estrelas</i></p>
               </div>
               @error ('numEstrelas')
                 <span class="erro"></span>

@@ -119,6 +119,8 @@ namespace App\Http\Controllers;
         }
       }
 
+
+
       function homeAdmin()
       {
       return view('homeAdmin');

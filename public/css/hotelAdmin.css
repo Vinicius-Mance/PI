@@ -39,6 +39,36 @@ main{
   margin: auto;
 }
 
+.btn-cad-quarto{
+  width: 90%;
+  height: 60px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.btn-cad-quarto button{
+  width: 40px;
+  height: 40px;
+  background-color: #0085a8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.btn-cad-quarto a{
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+  border: 1px solid #0085a8;
+  padding: 20px 10px 20px 5px;
+
+
+
+
+}
+
 
 .box-pesquisa-user p{
 margin-left: 15px;

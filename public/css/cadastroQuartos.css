@@ -37,6 +37,12 @@ main{
   font-size: 19px;
 }
 
+.erro{
+  color: red;
+  font-size: 11px;
+  margin-left: 10px;
+}
+
 .box-cad-hotel{
   width: 90%;
   margin: auto;
@@ -85,6 +91,18 @@ main{
 .cep{
   width: 32%;
   margin-right: auto;
+  display: block;
+
+}
+
+.cep select{
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin-left: 2px;
+  border: 1px solid green;
+  padding-left: 5px;
+  color: grey;
 }
 
 .cep2{

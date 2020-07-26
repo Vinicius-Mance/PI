@@ -12,7 +12,7 @@ Route::get('/Rpesq', 'Controles@Rpesq');
 
 Route::get('/item/{id}', 'Controles@item');
 
-Route::get('/reservas/{id}/{quartos}', 'Controles@reservas');
+Route::get('/reservas/{id}', 'Controles@reservas');
 
 Route::get('/logout', 'UsuariosController@logout');
 
@@ -23,6 +23,7 @@ Route::get('/cadastro', 'Controles@cadastro');
 Route::get('/hotelAdmin', 'EstabelecimentosController@hotelAdmin');
 
 Route::get('/cadastroQuartos/{id}', "Controles@cadastroQuartos");
+Route::post('/cadastrarQuartos/{id}', 'QuartosController@cadastrarQuarto');
 
 Route::get('/homeAdmin', 'Controles@homeAdmin');
 
@@ -40,9 +41,13 @@ Route::post('/atualizar', "UsuariosController@atualizar");
 
 Route::post('/atualizarSenha', "UsuariosController@atualizarSenha");
 
+Route::get('/cadastroHotel', 'EstabelecimentosController@cadastroHotelView');
+
 Route::post('/cadastroHotel', 'EstabelecimentosController@cadastroHotel');
 
-Route::post('/cadastroQuartos', 'QuartosController@cadastrarQuarto');
+//Route::get('/cadastroQuartos', 'QuartosController@cadastrarQuartoView');
+
+
 
 Route::get('/dadosHotelAdmin/{id}','EstabelecimentosController@dadosHotelAdmin');
 
@@ -59,9 +64,10 @@ Route::get('/dadosUserAdmin/{id}', 'Controles@dadosUserAdmin');
 Route::post('/atualizarPrivilegio/{id}', 'Controles@atualizarPrivilegio');
 
 Route::get('/editarDadosHotel/{id}', 'EstabelecimentosController@editarDadosHotel');
-
 Route::post('/editarDadosHotel/{id}', 'EstabelecimentosController@salvaDadosHotel');
 
+Route::get('/editarDadosQuarto/{id}', 'QuartosController@editarDadosQuarto');
+Route::post('/editarDadosQuarto/{id}', 'QuartosController@salvaDadosQuarto');
 
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});
