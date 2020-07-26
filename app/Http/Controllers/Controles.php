@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
   use App\Quarto;
   use App\Estabelecimento;
   use App\Imagem;
+  use App\User;
   use Illuminate\Support\Facades\DB;
 
     class Controles extends Controller{
@@ -115,9 +116,36 @@ namespace App\Http\Controllers;
       return view('homeAdmin');
       }
 
+      function userAdmin()
+      {
+
+      $users = User::all();
+      return view('userAdmin', ['users'=>$users]);
+
+      }
+
+
       function user()
       {
       return view('user');
+      }
+
+      function dadosUserAdmin($id)
+      {
+        $user = User::find($id);
+      return view('dadosUserAdmin',['user'=>$user]);
+      }
+
+      function atualizarPrivilegio(Request $request, $id){
+        if (!Auth::check()) {
+          return redirect('/login');
+        }
+
+        $user = User::find($id);
+        $user->adm = $request->adm;
+
+        $user->save();
+        return redirect('homeAdmin');
       }
   }
  ?>

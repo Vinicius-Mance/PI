@@ -51,5 +51,17 @@ Route::get('/quartosAdmin/{id}','QuartosController@quartosAdmin');
 Route::get('/busca', 'EstabelecimentosController@busca');
 
 Route::get('/dadosQuartosAdmin/{id}', 'QuartosController@dadosQuartosAdmin');
+
+Route::get('/userAdmin', 'Controles@userAdmin');
+
+Route::get('/dadosUserAdmin/{id}', 'Controles@dadosUserAdmin');
+
+Route::post('/atualizarPrivilegio/{id}', 'Controles@atualizarPrivilegio');
+
+Route::get('/editarDadosHotel/{id}', 'EstabelecimentosController@editarDadosHotel');
+
+Route::post('/editarDadosHotel/{id}', 'EstabelecimentosController@salvaDadosHotel');
+
+
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});

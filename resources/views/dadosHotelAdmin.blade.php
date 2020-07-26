@@ -13,12 +13,24 @@
       <div class="title">
         <h2>Informações do Hotel</h2>
       </div>
+      
+
       <section class="box-info-hotel">
+
         <div class="titulo">
-          <h1>{{$hotel->nome}}</h1>
-          <button type="button" name="button">Editar</button>
-          <a href="/quartosAdmin/{{$hotel->id}}">Quartos</a>
+          <div class="tit">
+            <h1>{{$hotel->nome}}</h1>
+          </div>
+
+        <div class="btn-opt-hot">
+          <a href="/editarDadosHotel/{{$hotel->id}}"><button type="button" name="button">Editar</button></a>
+          <a href="/quartosAdmin/{{$hotel->id}}"><button type="button" name="button">Quartos</button></a>
+
         </div>
+        </div>
+
+
+
         <div class="card-info">
           <div class="img">
             <img src="/img-lugar/quarto.JPG" alt="">
