@@ -99,12 +99,89 @@ class EstabelecimentosController extends Controller
           $imagem = new imagem();
 
           $imagem->estabelecimentos_id = $hotel->id;
-          $imagem->caminho = $file->store('imagensHotel');
+          $imagem->caminho = $file->store('/imagensHotel');
           $imagem->save();
           unset($imagem);
         }
     return redirect('/cadastroQuartos/'.$id);
   }
+
+
+
+
+  public function editarDadosHotel($id){
+    $hotel = Estabelecimento::find($id);
+    $imagem = DB::select("
+    select caminho
+        from imagens
+        where estabelecimentos_id = $id;
+    ");
+    foreach($imagem as $foto){$fotos[] = $foto->caminho;}
+
+    return view('/editarDadosHotel',["_ID"=>$id], compact('hotel', 'fotos'));
+  }
+
+
+
+  public function salvaDadosHotel(Request $request, $id){
+
+    $hotel = Estabelecimento::find($id);
+
+    $hotel->nome = $request->nome;
+
+    $hotel->email = $request->email;
+
+    $hotel->cnpj = $request->cnpj;
+
+    $hotel->endereco = $request->endereco;
+
+    $hotel->cep = $request->cep;
+
+    $hotel->cidade = $request->cidade;
+
+    $hotel->estado = $request->estado;
+
+    $hotel->tel1 = $request->tel1;
+
+    $hotel->tel2 = $request->tel2;
+
+    $hotel->celular = $request->celular;
+
+    $hotel->descricao = $request->descricao;
+
+    $hotel->wifi = $request->wifi;
+
+    $hotel->cafeDaManha = $request->cafeDaManha;
+
+    $hotel->piscina = $request->piscina;
+
+    $hotel->sauna = $request->sauna;
+
+    $hotel->permitePets = $request->permitePets;
+
+    $hotel->cancelamentoGratuito = $request->cancelamentoGratuito;
+
+  //  $hotel->fotos = $request->fotos;
+
+    $hotel->numEstrelas = $request->numEstrelas;
+
+    $hotel->save();
+
+      //$id = $hotel->id;
+        for($i=0; $i<count($request->allFiles()['fotos']); $i++){
+          $file = $request->allFiles()['fotos'][$i];
+
+          $imagem = new imagem();
+
+          $imagem->estabelecimentos_id = $hotel->id;
+          $imagem->caminho = $file->store('imagensHotel');
+          $imagem->save();
+          unset($imagem);
+        }
+    return redirect('/editarDadosHotel/'.$id);
+
+  }
+
 
   public function busca(Request $request){
     $local = $request->local;

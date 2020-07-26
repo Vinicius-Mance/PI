@@ -15,8 +15,6 @@ main{
   margin: 0 auto;
 }
 
-
-
 .box-info-hotel{
   width: 70%;
   margin: auto;
@@ -54,40 +52,32 @@ main{
 
 }
 
+.img-perfil img{
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
 .titulo{
   display: flex;
   width: 100%;
-
-
-}
-
-.tit{
-  width: 55%;
-}
-
-.btn-opt-hot{
-  width: 50%;
+  align-items:center;
+  margin-bottom: 20px;
 
 }
 
-
-
-.btn-opt-hot a button{
-  width: 130px;
-  height: 40px;
+.titulo button{
+  margin-top: 20px;
+  width: 120px;
+  height: 30px;
   border: none;
+  margin-right: 20px;
   background-color: #0085a8;
   color: white;
-  border-radius: 15px;
-  font-size: 16px;
-  margin-right: 10px;
 }
 
-.img img{
-  width: 300px;
-  height: 250px;
-  margin-right: 20px;
-
+.info span{
+  color: black;
 }
 
 .info h1, p{
@@ -103,58 +93,14 @@ main{
   font-family: Montserrat;
 }
 
-.card-reserva p{
-  margin-bottom: 10px;
-  font-family: Montserrat;
-  color: grey;
-
-}
-
-.card-reserva span{
-  font-weight: bolder;
-
-}
-
-span{
-  color: black;
-  font-weight: bold;
-}
-
-.exibir-fotos{
+.info div{
   width: 100%;
-
-
-  margin-top: 30px;
-}
-
-.exibir-fotos h2{
-  color: grey;
-}
-
-.box-fotos{
   display: flex;
-  width: 100%;
 }
 
-.card-fotos{
-  width: 30%;;
-  height: 200px;
-  border-radius: 15px;
-  box-shadow: 1px 8px 16px rgba(68,68,68,0.6);
-  margin-top: 20px;
-  margin-right: 10px;
-}
+.info div input{
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 40px;
 
-.card-fotos img{
-  width: 100%;
-  border-radius: 15px ;
-}
-
-.card-fotos a{
-  text-decoration: none;
-}
-
-.card-fotos p{
-  color: red;
-  text-align: center;
 }

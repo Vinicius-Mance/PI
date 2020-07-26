@@ -22,7 +22,7 @@
         <div class="cad-info-hotel">
 
           <div class="img-perfil">
-            <img src="img\perfil.png" alt="">
+            <img src="\img\perfil.png" alt="">
           </div>
 
           <form class="" action="/atualizar" method="post" enctype="multipart/form-data">
