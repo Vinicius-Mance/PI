@@ -15,16 +15,6 @@
         <h2>Quartos</h2>
       </div>
 
-      <!-- <section class="box-pesquisa-user">
-        <p>Pesquisar Hotel</p>
-        <div class="pesquisa-user">
-          <form class="" action="index.html" method="post">
-            <input type="text" name="" value="" placeholder="nome do hotel">
-            <button type="button" name="button">Pesquisar</button>
-          </form>
-        </div>
-      </section> -->
-
 
       <div class="btn-cad-quarto">
         <a href="/cadastroQuartos/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-plus"></i></button> Cadastrar Quarto</a>
@@ -32,7 +22,7 @@
 
       <section class="box-return-users">
         <div class="btn-voltar">
-          <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button" name="button"> Voltar</button></a>  
+          <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button" name="button"> Voltar</button></a>
         </div>
 
         <div class="users-title">

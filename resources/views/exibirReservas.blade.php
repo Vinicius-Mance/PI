@@ -26,7 +26,7 @@ date_default_timezone_set('America/Sao_Paulo');
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
           <div class="img">
-            <img src="/Imgens PI Hoteis/{{$reserva->foto}}" alt="">
+            <img src="/storage/{{$reserva->foto}}" alt="">
           </div>
           <div class="inf-reserva">
             <h2>{{$reserva->hotel}}</h2>

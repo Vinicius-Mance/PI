@@ -109,7 +109,7 @@
         <div class="pesquisa">
           @foreach($hoteis as $hotel)
           <div class="card-pesquisa">
-            <img src= "Imgens PI Hoteis/{{$hotel->imagem}}" alt="">
+            <img src= "/storage/{{$hotel->imagem}}" alt="">
             <div class="info">
               <h2>{{$hotel->nome}}</h2>
               <h4>{{$hotel->cidade}} - {{$hotel->estado}}</h4>

@@ -6,7 +6,6 @@
     <title>Entrar</title>
   </head>
   <body>
-
 <div class="lightbox">
   <div class="card-login">
     <div class="cancel">

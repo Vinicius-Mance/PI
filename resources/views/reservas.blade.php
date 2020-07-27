@@ -22,7 +22,7 @@
         <div class="card-info">
 
           <div class="img">
-            <img src="/{{$reserva->fotos}}" alt="">
+            <img src="/storage/{{$reserva->fotos}}" alt="">
           </div>
 
           <div class="info">

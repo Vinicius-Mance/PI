@@ -52,7 +52,7 @@
 
         <div class="card-info">
           <div class="img">
-            <img src="/Imgens PI Hoteis/{{$fotos[1]}}" alt="">
+            <img src="/storage/{{$fotos[1]}}" alt="">
           </div>
 
           <div class="info">
@@ -76,14 +76,9 @@
                <div class="box-fotos">
                  @foreach($fotos as $foto)
                  <div class="card-fotos">
-                   <img src="/Imgens PI Hoteis/{{$foto}}" alt="">
+                   <img src="/storage/{{$foto}}" alt="">
                  </div>
                  @endforeach
-
-                 <!-- <div class="card-fotos">
-                   <img src="/img-lugar/quarto.JPG" alt="">
-                 </div> -->
-
                </div>
           </div>
         </div>

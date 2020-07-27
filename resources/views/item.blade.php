@@ -29,14 +29,14 @@
 
       <section class="img">
         <div class="box-img-esq">
-          <img src="/Imgens PI Hoteis/{{$fotos[0]}}" alt="">
+          <img src="/storage/{{$fotos[0]}}" alt="">
         </div>
         <div class="box-img-dir">
           <div class="img-top">
-            <img src="/Imgens PI Hoteis/{{$fotos[1]}}" alt="">
+            <img src="/storage/{{$fotos[1]}}" alt="">
           </div>
           <div class="img-down">
-            <img src="/Imgens PI Hoteis/{{$fotos[2]}}" alt="">
+            <img src="/storage/{{$fotos[2]}}" alt="">
           </div>
         <button type="button" class="button-verMais" onclick="abrir()" name="button">Ver Mais </button>
         </div>
@@ -59,7 +59,7 @@ function fechar() {
 
 <div class="slider">
           @for ($i=0; $i < sizeof($fotos); $i++)
-            <img class="slides" src="/Imgens PI Hoteis/{{$fotos[$i]}}">
+            <img class="slides" src="/storage/{{$fotos[$i]}}">
           @endfor
       <button class="slider_esquerda" onclick="plusDivs(-1);plusBG(-1)">&#10094;</button>
       <button class="slider_direita" onclick="plusDivs(1);plusBG(1)">&#10095;</button>
@@ -72,7 +72,7 @@ function fechar() {
 @foreach ($reservas as $reserva)
 <section class="card-quarto">
   <div class="img-card">
-    <img src="/{{$reserva->fotos}}" alt="">
+    <img src="/storage/{{$reserva->fotos}}" alt="">
   </div>
   <div class="card-info">
     <h1>{{$reserva->nome}}</h1>

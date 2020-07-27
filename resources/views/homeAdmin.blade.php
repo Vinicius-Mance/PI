@@ -8,9 +8,7 @@
   </head>
   <body>
     @include("includes/headerAdmin")
-
     <main>
-
       <div class="title">
         <h2>Painel Administrativo</h2>
       </div>
@@ -48,21 +46,6 @@
           <h2>Sair</h2>
           </a>
         </div>
-
-        <!-- <div class="Card-opt">
-          <a href="#">
-          <img src="icon-img/cancelamento.jpg" alt="">
-          <h2>Cacelamentos</h2>
-          </a>
-        </div>
-
-        <div class="Card-opt">
-          <a href="#">
-          <img src="icon-img/feedback.jpg" alt="">
-          <h2>Feedback</h2>
-          </a>
-        </div> -->
-
       </section>
 
 

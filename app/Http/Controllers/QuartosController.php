@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Quarto;
 use App\Estabelecimento;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Storage;
+use Illuminate\Support\Facades\Storage;
 class QuartosController extends Controller
 {
 
@@ -48,8 +48,8 @@ class QuartosController extends Controller
      $quarto->estabelecimentos_id = $request->estabelecimentos_id;
         if ($request->hasFile('fotos')) {
            $estencao = $request->fotos->getClientOriginalExtension();
-           $nomeFoto =  $request->estabelecimentos_id.$request->nome.'.'.$estencao;
-              $request->fotos->storeAs('quartos', $nomeFoto)."<br>";
+           $nomeFoto =  'imagensHotel/'.$request->estabelecimentos_id.$request->nome.'.'.$estencao;
+              $request->fotos->storeAs('/',$nomeFoto);
               $quarto->fotos =  $nomeFoto;
         }
      $quarto->save();
@@ -109,7 +109,7 @@ class QuartosController extends Controller
        if ($request->hasFile('fotos')) {
           $estencao = $request->fotos->getClientOriginalExtension();
           $nomeFoto =  $request->estabelecimentos_id.$request->nome.'.'.$estencao;
-             $request->fotos->storeAs('quartos', $nomeFoto)."<br>";
+             $request->fotos->storeAs('imagensHotel/', $nomeFoto)."<br>";
              $quartoEdit->fotos =  $nomeFoto;
 
        }

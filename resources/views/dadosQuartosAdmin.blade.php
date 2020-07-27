@@ -15,13 +15,6 @@
       </div>
       <section class="box-info-hotel">
 
-        <!-- <div class="titulo">
-          <div class="img-perfil">
-            <img src="/img/perfil.png" alt="">
-          </div>
-          <h1>nome</h1>
-        </div> -->
-
         <div class="card-info">
           <h1>Nome:</h1>
 
