@@ -15,12 +15,19 @@
       </div>
       <section class="box-info-hotel">
 
+        <div class="titulo">
+          <div class="img-perfil">
+            <img src="/icon-img/quarto.png" alt="">
+          </div>
+
+        </div>
+
         <div class="card-info">
-          <h1>Nome:</h1>
+          <h1>Nome: {{$quarto->nome}}</h1>
 
 
           <div class="info">
-            <p> <span>Nome:</span> {{$quarto->nome}}</p>
+
             <p> <span>Camas de Solteiro: </span> {{$quarto->numCamasSolteiro}}</p>
             <p> <span>Camas de Casal:</span> {{$quarto->numCamasCasal}}</p>
             <p> <span>Descrição:</span> {{$quarto->descricao}}</p>
