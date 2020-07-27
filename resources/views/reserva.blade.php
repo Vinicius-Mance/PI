@@ -26,7 +26,7 @@
         <div class="card-info">
 
           <div class="img">
-            <img src="img-lugar/quarto.JPG" alt="">
+            <img src="/img-lugar/quarto.JPG" alt="">
           </div>
 
           <div class="info">

@@ -133,46 +133,50 @@ main{
 }
 
 .box-img-dir img{
-  height: 240px;
+  height: 297px;
   width: 100%;
 }
 
 .img-down{
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .button-verMais{
-  width: 99%;
-  height: 15%;
+  width: 70px;
+  height: 70px;
   display: block;
   text-align: center;
-  background-color: #a829e3;
+  background-color: #0085a8;
   color: white;
   border: none;
-  border-radius:10px;
-  font-size: 25px;
-  margin-top:10px;
+  border-radius:50%;
+  font-size: 13px;
+  margin-top:0px;
   position: relative;
+  margin-left: auto;
+  bottom: 40px;
+  margin-right: 25px;
 }
 
-.button-verMais img{
+/* .button-verMais img{
 background-color: black;
 width: 100%;
 height: 100%;
 object-fit: cover;
 opacity: 70%;
-}
+} */
 
-.button-verMais span{
+/* .button-verMais span{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .button-verMais:hover{
-  background-color: #0085a8;
-  bottom: 5px;
+  background-color: #eb8807;
+  position: relative;
+  bottom: 50px;
   box-shadow: 1px 8px 16px rgba(68,68,68,0.6);
 }
 
@@ -218,6 +222,7 @@ main h2{
 
 .card-info h1{
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .card-info span{
@@ -234,8 +239,11 @@ main h2{
   display: flex;
 }
 
-.wi-fi{
-  margin-right: 20px;
+.wi-fi {
+  margin-right: 10px;
+}
+.wi-fi span{
+  margin-left: 10px;
 }
 
 .card-preco{
@@ -245,9 +253,9 @@ main h2{
 }
 
 .card-preco h4{
-  margin-top: 20px;
+  margin-top: 50px;
   color: green;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .card-preco p{
@@ -258,7 +266,8 @@ main h2{
 
 .card-preco h1{
   color: orange;
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: 0px;
 }
 
 .card-preco button{
@@ -267,6 +276,7 @@ main h2{
   border: none;
   color: white;
   background-color: #0085a8;
+  margin-top: 20px;
 }
 
 
@@ -369,9 +379,16 @@ color: grey;
   height: 80px;
 }
 
-.box-titulo-hotel h1{
+.card-info-hotel h1{
   color: grey;
   margin: 20px;
+}
+
+.hotel-item{
+  width: 400px;
+  height: 50px;
+  display: flex;
+  margin-left: 20px;
 }
 
 .titulo-dir{
