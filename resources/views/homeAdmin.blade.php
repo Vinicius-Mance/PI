@@ -43,13 +43,13 @@
       <section class="box-card-opt">
 
         <div class="Card-opt">
-          <a href="#">
-          <img src="icon-img/vendas.png" alt="">
-          <h2>Vendas</h2>
+          <a href="/logout">
+          <img src="icon-img/logout.png" alt="">
+          <h2>Sair</h2>
           </a>
         </div>
 
-        <div class="Card-opt">
+        <!-- <div class="Card-opt">
           <a href="#">
           <img src="icon-img/cancelamento.jpg" alt="">
           <h2>Cacelamentos</h2>
@@ -61,7 +61,7 @@
           <img src="icon-img/feedback.jpg" alt="">
           <h2>Feedback</h2>
           </a>
-        </div>
+        </div> -->
 
       </section>
 

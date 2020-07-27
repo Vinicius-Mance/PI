@@ -176,7 +176,8 @@ class EstabelecimentosController extends Controller
     $hotel->save();
 
       //$id = $hotel->id;
-      if ($request->fotos) {
+      if ($request->hasFile('fotos')) {
+
         for($i=0; $i<count($request->allFiles()['fotos']); $i++){
           $file = $request->allFiles()['fotos'][$i];
 

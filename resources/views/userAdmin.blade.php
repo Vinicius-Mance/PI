@@ -27,6 +27,9 @@
       </section>
 
       <section class="box-return-users">
+        <div class="btn-voltar">
+           <a href="/homeAdmin"><button id="b333"type="button" name="button"> Voltar</button></a>
+        </div>
 
         <div class="users-title">
 

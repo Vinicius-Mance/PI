@@ -19,6 +19,10 @@
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
 
+          <div class="btn-voltar">
+            <a href="/dadosQuartosAdmin/{{$quarto->id}}"><button id="b333"type="button"  name="button"> Voltar</button></a>
+          </div>
+
         <form class="" action="/editarDadosQuarto/{{$quarto->id}}" method="post" enctype="multipart/form-data">
             @csrf
             <p>Nome quarto</p>
