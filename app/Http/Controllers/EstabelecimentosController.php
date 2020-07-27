@@ -224,24 +224,10 @@ class EstabelecimentosController extends Controller
                   order by e.id;
       ");
       return view('pesquisa',compact('hoteis') );
-
-
-      // if($local == ""){
-      //   return view('index');
-      // }
-      // $hoteis = Estabelecimento::where('nome', 'LIKE','%'.$local.'%')->get();
-      // return view('pesquisa',["hoteis"=>$hoteis] );
     }
 
     public function buscarHoteis(Request $request){
       $local = $request->local;
-
-      // if($local == ""){
-      //   return redirect('/',);
-      // }
-      // $hoteis = Estabelecimento::where('nome', 'LIKE','%'.$local.'%')->get();
-      // return view('pesquisa',["hoteis"=>$hoteis] );
-
 
       $hoteis = DB::select(
         "select e.nome,caminho as imagem, valorDiaria as preco,e.id as hotelId, e.cidade,
