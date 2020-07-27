@@ -44,7 +44,7 @@
             </div>
 
             <div class="btn-voltar" >
-            <a href="/excluirQuarto/{{$quarto->id}}"> <button type="button" name="button" style="background-color:#c94f63;">Excluir</button> </a>  
+            <a href="/excluirQuarto/{{$quarto->id}}"> <button type="button" name="button" style="background-color:#c94f63;">Excluir</button> </a>
             </div>
 
           </div>

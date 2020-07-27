@@ -70,16 +70,16 @@
 
             </div>
 
+            @if(auth()->user()->adm  == 0)
             <div class="check-boxx">
               <input type="checkbox" name="receber_info" value="1" >
               <p>Deseja receber informações e promoções por email?</p>
             </div>
+            @endif
 
-            <div class="alterar-senha">
+            <div class="alterar-senha" style="margin-top:20px;">
               <a href="#" onclick="abrirSenha()">Alterar Senha</a>
             </div>
-
-
 
             <button type="submit" name="button">Salvar Alterações</button>
 

@@ -24,7 +24,11 @@
               <button class="dropbtn"><i class="fa fa-bars"></i>
               </button>
               <div class="dropdown-content">
-                <a href="#"><i class="fa fa-user"></i>Editar Perfil</a>
+                <a href="/perfil/{{auth()->user()->id}}"><i class="fa fa-user"></i>Editar Perfil</a>
+                <a href="/homeAdmin"><i class="fa fa-home"></i>Home</a>
+                <a href="/userAdmin"><i class="fa fa-users"></i>Usuarios</a>
+                <a href="/hotelAdmin"><i class="fa fa-h-square"></i>Hoteis</a>
+                <a href="/cadastroHotel"><i class="fa fa-list-alt"></i>Cad Hoteis</a>
                 <a href="/logout"><i class="fa fa-sign-out"></i>Sair</a>
               </div>
               </div>

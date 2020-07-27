@@ -28,11 +28,17 @@
           </div>
         </div>
 
+        <div class="btn-menu-1">
+          <div class="btn-cad-quarto">
+            <a href="/quartosAdmin/{{$hotel->id}}"><button type="button" name="button" style="background-color:#c94f63;"><i class="fa fa-trash"></i></button> Excluir </a>
+          </div>
+        </div>
+
       </div>
 
 
       <section class="box-info-hotel">
-      <a href="/hotelAdmin"><button type="button" name="button"> Voltar</button> </a>  
+      <a href="/hotelAdmin"><button type="button" name="button"> Voltar</button> </a>
 
         <div class="titulo">
           <div class="tit">

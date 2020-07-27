@@ -174,6 +174,8 @@ class EstabelecimentosController extends Controller
     $hotel->save();
 
       //$id = $hotel->id;
+      if ($request->hasFile('fotos')) {
+
         for($i=0; $i<count($request->allFiles()['fotos']); $i++){
           $file = $request->allFiles()['fotos'][$i];
 
@@ -184,6 +186,7 @@ class EstabelecimentosController extends Controller
           $imagem->save();
           unset($imagem);
         }
+      }
     return redirect('/editarDadosHotel/'.$id);
 
   }
