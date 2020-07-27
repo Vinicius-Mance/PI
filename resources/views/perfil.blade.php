@@ -119,13 +119,13 @@ function fecharSenha() {
 </script>
 
 <div id="lightbox2">
-    <link rel="stylesheet" href="css/entrar.css">
+    <link rel="stylesheet" href="/css/entrar.css">
 
 <div id="senha">
 
   <div class="card-login">
     <div class="cancel">
-      <button type="button" onclick="fecharSenha()"name="button">X</button>
+      <button style="padding:8px 10px; border-radius:50%; border: none;" type="button" onclick="fecharSenha()"name="button">X</button>
 
     </div>
     <div class="img2">

@@ -18,9 +18,9 @@
         <p>Pesquisar Hotel</p>
 
         <div class="pesquisa-user">
-          <form class="" action="index.html" method="post">
-            <input type="text" name="" value="" placeholder="nome do hotel">
-            <button type="button" name="button">Pesquisar</button>
+          <form action="/pesquisaHotelAdmin" method="get">
+            <input type="text" name="pesquisa" value="" placeholder="nome do hotel">
+            <button type="submit" name="button">Pesquisar</button>
           </form>
         </div>
       </section>
@@ -32,8 +32,10 @@
 
         <div class="users-title">
           <h2>Hoteis Cadastrados</h2>
-          <h2 id="Nusuarios">1289</h2>
+          @foreach ($hoteis as $quantos)@endforeach
+          <h2 id="Nusuarios">{{$quantos->quantidade}}</h2>
         </div>
+{{-- {{dd($quantos)}} --}}
 
         <div class="return-user-info">
           <div class="user-id">

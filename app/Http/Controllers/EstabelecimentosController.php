@@ -12,7 +12,11 @@ class EstabelecimentosController extends Controller
 {
   function hotelAdmin()
   {
-    $hoteis = Estabelecimento::all();
+    $hoteis = DB::select("select id,nome,endereco,quantidade
+        from estabelecimentos
+        inner join
+      (select count(id) as quantidade from estabelecimentos) hotel;");
+
     return view('hotelAdmin', compact('hoteis'));
   }
 
@@ -107,8 +111,6 @@ class EstabelecimentosController extends Controller
   }
 
   public function cadastroHotelView(){
-
-
     return view('/cadastroHotel');
   }
 

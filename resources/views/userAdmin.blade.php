@@ -7,7 +7,7 @@
     <title></title>
   </head>
   <body>
-    @include("includes/headerAdmin");
+    @include("includes/headerAdmin")
 
     <main>
 
@@ -19,9 +19,9 @@
         <p>Pesquisar Usuario</p>
 
         <div class="pesquisa-user">
-          <form class="" action="index.html" method="post">
-            <input type="text" name="" value="" placeholder="nome completo">
-            <button type="button" name="button">Pesquisar</button>
+          <form action="/pesquisaUserAdmin" method="get">
+            <input type="text" name="pesquisa" value="{{old('pesquisa')}}" placeholder="Nome, id ou email do usuário">
+            <button type="submit" name="button">Pesquisar</button>
           </form>
         </div>
       </section>
@@ -34,7 +34,9 @@
         <div class="users-title">
 
           <h2>Usuarios Cadastrados</h2>
-          <h2 id="Nusuarios">65678</h2>
+      {{-- {{dd($users)}} --}}
+          @foreach ($users as $quantos)@endforeach
+          <h2 id="Nusuarios">{{$quantos->quantidade}}</h2>
 
         </div>
 

@@ -20,8 +20,8 @@ class CreateReservasTable extends Migration
           $table->double('valor');
           $table->bigInteger('numeroCartao');
           $table->string('nomeCartao');
-          $table->foreignId('quartos_id')->references('id')->on('quartos');
           $table->foreignId('usuarios_id')->references('id')->on('users');
+          $table->foreignId('quartos_id')->references('id')->on('quartos');
           $table->foreignId('estabelecimentos_id')->references('id')->on('estabelecimentos');
           $table->timestamps();
         });

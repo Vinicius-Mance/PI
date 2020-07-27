@@ -26,9 +26,6 @@
           </div>
 
           <div class="info">
-            {{-- <h1>Standart Room</h1>
-            <p><span>Entrada:</span> <span> {{strftime('%A, %d de %B as %H:%Mh', strtotime($entrada))}}</span></p>
-            <p><span>Saida:</span> <span> {{strftime('%A, %d de %B as %H:%Mh', strtotime($saida))}}</span></p> --}}
             <p><span> Diária R$ :</span> R$ {{number_format($reserva->preco *2, 2,',', '.')}}</p><br>
           </div>
         </div>
@@ -74,27 +71,30 @@
           </div>
 
           <hr>
-{{-- {{dd($_ID,$_QUARTO)}} --}}
           <h1>DADOS DE PAGAMENTO</h1>
           <div class="dados">
             <div class="cpf">
               <p>Numero do Cartão</p>
               <input type="number" name="numeroCartao" value="{{old('numeroCartao')}}" placeholder="xxxx xxxx xxxx xxxx">
+              @error ('numeroCartao')<span class="erro">Coloque um número de cartão válido</span>@enderror
             </div>
             <div class="cpf">
-              <p>Bandeira do cartão</p>
+              <p>Nome do usuário do cartão</p>
               <input type="text" name="nomeCartao" value="{{old('nomeCartao')}}" placeholder="nome">
+              @error ('nomeCartao')<span class="erro">Coloque um nome referente ao cartão</span>@enderror
             </div>
           </div>
 
           <div class="dados">
             <div class="cpf">
               <p>Validade</p>
-              <input type="number" name="validade" placeholder="val">
+              <input type="number" name="validade" value="{{old('validade')}}"placeholder="val">
+              @error ('validade')<span class="erro">Coloque uma data válida ao cartão</span>@enderror
             </div>
             <div class="cpf">
               <p>Cod Segurança</p>
-              <input type="text" name="codSegurança" placeholder="cvv">
+              <input type="text" name="codSegurança" value="{{old('codSegurança')}}"placeholder="cvv">
+              @error ('codSegurança')<span class="erro">Coloque um numero válido</span>@enderror
             </div>
 
           </div>

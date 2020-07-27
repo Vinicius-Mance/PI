@@ -47,7 +47,9 @@ Route::post('/cadastroHotel', 'EstabelecimentosController@cadastroHotel');
 
 //Route::get('/cadastroQuartos', 'QuartosController@cadastrarQuartoView');
 
+Route::get('/pesquisaUserAdmin','Controles@pesquisaUserAdmin');
 
+Route::get('/pesquisaHotelAdmin','Controles@pesquisaHotelAdmin');
 
 Route::get('/dadosHotelAdmin/{id}','EstabelecimentosController@dadosHotelAdmin');
 
