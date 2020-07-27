@@ -119,9 +119,13 @@ class QuartosController extends Controller
        }
 
     $quartoEdit->save();
+    return redirect('quartosAdmin/'.$request->estabelecimentos_id);
 
+  }
 
-    return redirect('editarDadosQuarto/'.$id);
-
+  function excluirQuarto($id){
+    $quarto = Quarto::find($id);
+    $quarto->delete();
+    return redirect('quartosAdmin/'.$quarto->estabelecimentos_id);
   }
 }

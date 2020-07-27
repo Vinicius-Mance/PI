@@ -18,6 +18,10 @@
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
 
+          <div class="btn-voltar">
+             <a href="/hotelAdmin"><button id="b333"type="button" name="button"> Voltar</button></a>  
+          </div>
+
           <form class="" action="/cadastrarQuartos/{id}" method="post" enctype="multipart/form-data">
             @csrf
             <p>Nome quarto</p>

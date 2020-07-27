@@ -31,6 +31,9 @@
       </div>
 
       <section class="box-return-users">
+        <div class="btn-voltar">
+          <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button" name="button"> Voltar</button></a>  
+        </div>
 
         <div class="users-title">
           <h2>Quartos Cadastrados</h2>

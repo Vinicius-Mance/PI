@@ -40,11 +40,11 @@
             </div>
 
             <div class="btn-voltar">
-            <a href="/editarDadosQuarto/{{$quarto->id}}"> <button type="button" name="button">Editar</button> </a>  
+            <a href="/editarDadosQuarto/{{$quarto->id}}"> <button type="button" name="button">Editar</button> </a>
             </div>
 
             <div class="btn-voltar" >
-              <button type="button" name="button" style="background-color:#c94f63;">Excluir</button>
+            <a href="/excluirQuarto/{{$quarto->id}}"> <button type="button" name="button" style="background-color:#c94f63;">Excluir</button> </a>  
             </div>
 
           </div>

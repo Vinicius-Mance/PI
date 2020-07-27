@@ -43,4 +43,8 @@ class ReservasController extends Controller
       dd($request->all(),$reserva);
       // $reserva->save();
     }
+
+    public function exibirReservas(){
+      return view('exibirReservas');
+    }
 }
