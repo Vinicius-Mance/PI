@@ -77,5 +77,8 @@ Route::post('/reservarQuarto', 'ReservasController@reservarQuarto');
 
 Route::get('/exibirReservas/{id}', 'ReservasController@exibirReservas' );
 
+Route::get('/excluirHotel/{id}', 'EstabelecimentosController@excluirHotel' );
+
+
 ///////////////////////////////
 Route::get('/laravel', function () { return view('welcome');});

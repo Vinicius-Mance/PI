@@ -30,7 +30,7 @@
 
         <div class="btn-menu-1">
           <div class="btn-cad-quarto">
-            <a href="/quartosAdmin/{{$hotel->id}}"><button type="button" name="button" style="background-color:#c94f63;"><i class="fa fa-trash"></i></button> Excluir </a>
+            <a href="/excluirHotel/{{$hotel->id}}"><button type="button" name="button" style="background-color:#c94f63;"><i class="fa fa-trash"></i></button> Excluir </a>
           </div>
         </div>
 
@@ -52,7 +52,7 @@
 
         <div class="card-info">
           <div class="img">
-            <img src="/img-lugar/quarto.JPG" alt="">
+            <img src="/Imgens PI Hoteis/{{$fotos[1]}}" alt="">
           </div>
 
           <div class="info">
@@ -74,14 +74,16 @@
           <div class="exibir-fotos">
                <h2>Imagens</h2>
                <div class="box-fotos">
-
+                 @foreach($fotos as $foto)
                  <div class="card-fotos">
-                   <img src="/img-lugar/quarto.JPG" alt="">
+                   <img src="/Imgens PI Hoteis/{{$foto}}" alt="">
                  </div>
+                 @endforeach
 
-                 <div class="card-fotos">
+                 <!-- <div class="card-fotos">
                    <img src="/img-lugar/quarto.JPG" alt="">
-                 </div>
+                 </div> -->
+
                </div>
           </div>
         </div>

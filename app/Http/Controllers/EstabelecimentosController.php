@@ -20,11 +20,25 @@ class EstabelecimentosController extends Controller
     return view('hotelAdmin', compact('hoteis'));
   }
 
+
+
   function dadosHotelAdmin($id)
   {
     $hotel = Estabelecimento::find($id);
-    return view('dadosHotelAdmin',["_ID"=>$id], compact('hotel'));
+    $imagem = DB::select("
+    select caminho
+        from imagens
+        where estabelecimentos_id = $id;
+    ");
+    foreach($imagem as $foto){$fotos[] = $foto->caminho;}
+    return view('dadosHotelAdmin',["_ID"=>$id], compact('hotel', 'fotos'));
   }
+
+
+
+
+
+
   function cadastroHotel(Request $request)
   {
 
@@ -245,6 +259,25 @@ class EstabelecimentosController extends Controller
       ");
       return view('pesquisa',compact('hoteis'));
 
+    }
+
+
+
+    public function excluirHotel($id){
+
+      DB::DELETE("
+      delete from imagens
+      where estabelecimentos_id = $id");
+
+      DB::DELETE("
+      delete from quartos
+      where estabelecimentos_id = $id");
+
+      DB::DELETE("
+      delete from estabelecimentos
+      where id = $id");
+
+      return redirect('hotelAdmin');
 
     }
 
