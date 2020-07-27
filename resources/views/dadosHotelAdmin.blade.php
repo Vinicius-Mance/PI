@@ -18,13 +18,13 @@
 
         <div class="btn-menu-1" >
           <div class="btn-cad-quarto">
-            <a href="/editarDadosHotel/{{$hotel->id}}" id="b001"><button type="button" name="button"><i class="fa fa-plus"></i></button> Editar </a>
+            <a href="/editarDadosHotel/{{$hotel->id}}" id="b001"><button type="button" name="button"><i class="fa fa-edit"></i></button> Editar </a>
           </div>
         </div>
 
         <div class="btn-menu-1">
           <div class="btn-cad-quarto">
-            <a href="/quartosAdmin/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-plus"></i></button> Quartos </a>
+            <a href="/quartosAdmin/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-home"></i></button> Quartos </a>
           </div>
         </div>
 
@@ -32,6 +32,7 @@
 
 
       <section class="box-info-hotel">
+      <a href="/hotelAdmin"><button type="button" name="button"> Voltar</button> </a>  
 
         <div class="titulo">
           <div class="tit">

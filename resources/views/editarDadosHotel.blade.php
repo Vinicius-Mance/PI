@@ -21,7 +21,11 @@
       </div>  --}}
 
       <section class="box-cad-hotel">
+
         <div class="cad-info-hotel">
+          <div class="btn-voltar">
+            <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button"  name="button"> Voltar</button></a>  
+          </div>
 
           <form action="/editarDadosHotel/{{$hotel->id}}" method="post" enctype="multipart/form-data">
             @csrf

@@ -84,7 +84,7 @@ color: #039987;
   margin: auto;
   border-radius: 20px;
   margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .pesquisa-user form input{
@@ -123,6 +123,18 @@ color: #039987;
 
 #Nusuarios{
   margin-left: auto;
+}
+
+#b333{
+  margin-bottom: 10px;
+  width: 60px;
+  height: 24px;
+  background-color: #198da9;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+
 }
 
 .box-return-users{

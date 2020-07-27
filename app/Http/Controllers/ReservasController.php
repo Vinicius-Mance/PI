@@ -50,4 +50,8 @@ class ReservasController extends Controller
 
       return redirect('/perfil/'.$request->usuarios_id);
     }
+
+    public function exibirReservas(){
+      return view('exibirReservas');
+    }
 }
