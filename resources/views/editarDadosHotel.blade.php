@@ -16,14 +16,14 @@
         <h2>Atualizar informações</h2>
       </div>
 
-      <!-- <div class="btn-cad-quarto">
+      {{-- <div class="btn-cad-quarto">
         <a href="/cadastroQuartos/{{$hotel->id}}"><button type="button" name="button"><i class="fa fa-plus"></i></button> Cadastrar Quarto</a>
-      </div> -->
+      </div>  --}}
 
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
 
-          <form class="" action="/editarDadosHotel/{{$hotel->id}}" method="post" enctype="multipart/form-data">
+          <form action="/editarDadosHotel/{{$hotel->id}}" method="post" enctype="multipart/form-data">
             @csrf
             <p>Nome do Hotel</p>
             <input type="text" name="nome" value="{{$hotel->nome}}" placeholder="name">
@@ -205,11 +205,7 @@
               <p id="demo"></p>
 
             </div>
-
             <hr>
-
-
-
             <button type="submit"  name="button">ATUALIZAR</button>
 
           </form>

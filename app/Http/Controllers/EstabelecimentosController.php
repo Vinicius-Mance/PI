@@ -12,7 +12,11 @@ class EstabelecimentosController extends Controller
 {
   function hotelAdmin()
   {
-    $hoteis = Estabelecimento::all();
+    $hoteis = DB::select("select id,nome,endereco,quantidade
+        from estabelecimentos
+        inner join
+      (select count(id) as quantidade from estabelecimentos) hotel;");
+
     return view('hotelAdmin', compact('hoteis'));
   }
 
@@ -107,8 +111,6 @@ class EstabelecimentosController extends Controller
   }
 
   public function cadastroHotelView(){
-
-
     return view('/cadastroHotel');
   }
 
@@ -174,6 +176,7 @@ class EstabelecimentosController extends Controller
     $hotel->save();
 
       //$id = $hotel->id;
+      if ($request->fotos) {
         for($i=0; $i<count($request->allFiles()['fotos']); $i++){
           $file = $request->allFiles()['fotos'][$i];
 
@@ -184,6 +187,7 @@ class EstabelecimentosController extends Controller
           $imagem->save();
           unset($imagem);
         }
+      }
     return redirect('/editarDadosHotel/'.$id);
 
   }

@@ -129,11 +129,52 @@ namespace App\Http\Controllers;
       function userAdmin()
       {
 
-      $users = User::all();
+      $users = DB::select("select id,nome,email,quantidade
+          from users
+          inner join
+        (select count(id) as quantidade from users) usuarios;");
       return view('userAdmin', ['users'=>$users]);
 
       }
 
+      function pesquisaUserAdmin(Request $request){
+        $users = DB::select("select id,nome,email,quantidade
+                from users u
+                inner join
+                  (select count(id) as quantidade
+                    from users
+                    where nome like '%$request->pesquisa%'
+                    or email like '%$request->pesquisa%'
+                    or id like '%$request->pesquisa%') usuario
+          where (u.nome like '%$request->pesquisa%'
+          or u.email like '%$request->pesquisa%'
+          or u.id like '%$request->pesquisa%')");
+        if (!$request->pesquisa or !$users) {
+          return redirect('/userAdmin');
+
+        }
+
+        return view('userAdmin', ['users'=>$users]);
+      }
+
+      function pesquisaHotelAdmin(Request $request){
+        $hoteis = DB::select("select id,nome,endereco,quantidade
+                from estabelecimentos e
+                inner join
+                  (select count(id) as quantidade
+                    from estabelecimentos
+                    where nome like '%$request->pesquisa%'
+                    or endereco like '%$request->pesquisa%'
+                    or id like '%$request->pesquisa%') hotel
+          where (e.nome like '%$request->pesquisa%'
+          or endereco like '%$request->pesquisa%'
+          or e.id like '%$request->pesquisa%')");
+        if (!$request->pesquisa or !$hoteis) {
+          return redirect('/hotelAdmin');
+        }
+
+        return view('hotelAdmin', ['hoteis'=>$hoteis]);
+      }
 
       function user()
       {

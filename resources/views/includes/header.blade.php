@@ -56,7 +56,7 @@
                 </div>
             </div>
           </div> --}}
-          <button type="submit" name="upload">Pesquisar</button>
+          <button type="submit" name="Upload">Pesquisar</button>
         </form>
       </div>
     </header>
