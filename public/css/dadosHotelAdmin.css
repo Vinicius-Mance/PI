@@ -184,6 +184,7 @@ span{
   width: 100%;
 
 
+
   margin-top: 30px;
 }
 
@@ -194,6 +195,7 @@ span{
 .box-fotos{
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .card-fotos{
@@ -207,6 +209,7 @@ span{
 
 .card-fotos img{
   width: 100%;
+  height: 200px;
   border-radius: 15px ;
 }
 
