@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,7 +9,7 @@
     <title></title>
   </head>
   <body>
-    @include("includes/headerAdmin"); 
+    @include("includes/headerAdmin");
 
     <main>
 

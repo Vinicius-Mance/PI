@@ -24,7 +24,7 @@
 
         <div class="cad-info-hotel">
           <div class="btn-voltar">
-            <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button"  name="button"> Voltar</button></a>  
+            <a href="/dadosHotelAdmin/{{$hotel->id}}"><button id="b333"type="button"  name="button"> Voltar</button></a>
           </div>
 
           <form action="/editarDadosHotel/{{$hotel->id}}" method="post" enctype="multipart/form-data">
@@ -183,7 +183,7 @@
 
                    @foreach ($fotos as $foto)
                    <div class="card-fotos">
-                     <img src="/Imgens PI Hoteis/{{$foto}}" alt="">
+                     <img src="/Storage/{{$foto}}" alt="">
                      <div class="lixo-icon">
                        <i class="fas fa-trash"></i>
                        <a href="#">Excluir </a>
