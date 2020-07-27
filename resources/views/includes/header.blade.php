@@ -9,7 +9,7 @@
             <div class="dropdown-content">
               <a href="/"><i class="fa fa-home"></i>Home</a>
               <a href="/perfil/{{auth()->user()->id}}"><i class="fa fa-user"></i>Perfil</a>
-              <a href="/exibirReservas"><i class="fa fa-clipboard-check"></i>Reservas</a>
+              <a href="/exibirReservas/{{auth()->user()->id}}"><i class="fa fa-clipboard-check"></i>Reservas</a>
               <a href="/logout"><i class="fa fa-sign-out"></i>Sair</a>
             </div>
           @endauth

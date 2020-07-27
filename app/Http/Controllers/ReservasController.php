@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reserva;
+use Illuminate\Support\Facades\DB;
 class ReservasController extends Controller
 {
     function reservarQuarto(Request $request){
@@ -51,7 +52,15 @@ class ReservasController extends Controller
       return redirect('/perfil/'.$request->usuarios_id);
     }
 
-    public function exibirReservas(){
-      return view('exibirReservas');
+    public function exibirReservas($id){
+      $reservas_user =  DB::select(DB::raw("select e.nome as hotel,q.nome as quarto, valor,caminho as foto,
+      	dataIN as entrada, dataOUT as saida
+      	from reservas r
+      	inner join estabelecimentos e on e.id = r.estabelecimentos_id
+          inner join quartos q on q.id = r.quartos_id
+          inner join imagens i on i.estabelecimentos_id = q.estabelecimentos_id
+      	where r.usuarios_id = $id
+      	group by r.id;"));
+      return view('exibirReservas',["_ID"=>$id], compact('reservas_user'));
     }
 }
