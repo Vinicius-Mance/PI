@@ -1,3 +1,7 @@
+@php
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
+@endphp
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -17,33 +21,26 @@
 
       </div>
 
-
+{{-- {{dd($reservas_user)}} --}}
+        @foreach ($reservas_user as $reserva)
       <section class="box-cad-hotel">
         <div class="cad-info-hotel">
-
           <div class="img">
-            <img src="\img\perfil.png" alt="">
+            <img src="/Imgens PI Hoteis/{{$reserva->foto}}" alt="">
           </div>
-
           <div class="inf-reserva">
-            <h2>Paradise Resort</h2>
-            <p>Data de Entrada: <span>10/05/2021</span> </p>
-            <p>Data de Saida: <span>15/05/2021</span></p>
-            <p>Numero de Quartos: <span>2</span></p>
-            <p>Valor: <span>245.00</span></p>
-
-
+            <h2>{{$reserva->hotel}}</h2>
+            <p>Quarto registrado: <span>{{$reserva->quarto}}</span> </p>
+            <p>Data de Entrada: <span>{{strftime('%a, %d de %B de %Y', strtotime($reserva->entrada))}}</span> </p>
+            <p>Data de Saida: <span>{{strftime('%a, %d de %B de %Y', strtotime($reserva->saida))}}</span></p>
+            <p>Valor total - R$: <span>{{number_format($reserva->valor, 2 , ',' , '.')}}</span></p>
+      {{-- <pre>
+      {{print_r($reserva)}}
+      </pre> --}}
           </div>
-
-
-
-
-
-
-
         </div>
-
       </section>
+        @endforeach
 
     </main>
 

@@ -121,7 +121,7 @@ class QuartosController extends Controller
 
   function excluirQuarto($id){
     $quarto = Quarto::find($id);
-    $quarto->delete();
+    $quarto->delete($id);
     return redirect('quartosAdmin/'.$quarto->estabelecimentos_id);
   }
 }
